@@ -1,0 +1,45 @@
+{
+  "flutter": {
+    "platforms": {
+      "android": {
+        "default": {
+          "projectId": "myresume-b669c",
+          "appId": "1:957734125189:android:e3a9e8f72b492b9354f3ec",
+          "fileOutput": "android/app/google-services.json"
+        }
+      },
+      "ios": {
+        "default": {
+          "projectId": "myresume-b669c",
+          "appId": "1:957734125189:ios:3c941d64c805d17354f3ec",
+          "uploadDebugSymbols": false,
+          "fileOutput": "ios/Runner/GoogleService-Info.plist"
+        }
+      },
+      "dart": {
+        "lib/firebase_options.dart": {
+          "projectId": "myresume-b669c",
+          "configurations": {
+            "android": "1:957734125189:android:e3a9e8f72b492b9354f3ec",
+            "ios": "1:957734125189:ios:3c941d64c805d17354f3ec",
+            "web": "1:957734125189:web:0a41e1b41825623f54f3ec"
+          }
+        }
+      }
+    }
+  },
+  "hosting": {
+    "public": "build/web",
+    "ignore": [
+      "firebase.json",
+      "**/.*",
+      "**/node_modules/**"
+    ],
+    "rewrites": [
+      {
+        "source": "**",
+        "destination": "/index.html"
+      }
+    ]
+  }
+}
