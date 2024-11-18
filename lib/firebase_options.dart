@@ -47,29 +47,29 @@ class DefaultFirebaseOptions {
   }
 
   static const FirebaseOptions web = FirebaseOptions(
-    apiKey: 'AIzaSyCCXdhx3mcFLsQtcOlEhCvFkIH-unE0QwA',
-    appId: '1:957734125189:web:0a41e1b41825623f54f3ec',
-    messagingSenderId: '957734125189',
-    projectId: 'myresume-b669c',
-    authDomain: 'myresume-b669c.firebaseapp.com',
-    storageBucket: 'myresume-b669c.firebasestorage.app',
-    measurementId: 'G-VKFKB2LXWP',
+    apiKey: 'AIzaSyAlDK-9j50eiMYLRfJmonAQaCpE6I4zkLo',
+    appId: '1:851496697910:web:35cac5e15017b5a0f41897',
+    messagingSenderId: '851496697910',
+    projectId: 'myresume-dcd44',
+    authDomain: 'myresume-dcd44.firebaseapp.com',
+    storageBucket: 'myresume-dcd44.firebasestorage.app',
+    measurementId: 'G-WD5CZPZW8L',
   );
 
   static const FirebaseOptions android = FirebaseOptions(
-    apiKey: 'AIzaSyACqNSqDTx_g7Lb6sYJq-9569xSGnGivps',
-    appId: '1:957734125189:android:e3a9e8f72b492b9354f3ec',
-    messagingSenderId: '957734125189',
-    projectId: 'myresume-b669c',
-    storageBucket: 'myresume-b669c.firebasestorage.app',
+    apiKey: 'AIzaSyAhYzodaMfKhsicphDkMcBPTn7DpGErGpo',
+    appId: '1:851496697910:android:f22309650e11364ef41897',
+    messagingSenderId: '851496697910',
+    projectId: 'myresume-dcd44',
+    storageBucket: 'myresume-dcd44.firebasestorage.app',
   );
 
   static const FirebaseOptions ios = FirebaseOptions(
-    apiKey: 'AIzaSyDTK8X8p68psXHVZAGKcqKbd4mCgjFWXa4',
-    appId: '1:957734125189:ios:3c941d64c805d17354f3ec',
-    messagingSenderId: '957734125189',
-    projectId: 'myresume-b669c',
-    storageBucket: 'myresume-b669c.firebasestorage.app',
+    apiKey: 'AIzaSyCN8PjA4qlDZvUqVe9C3Q-skYEeXSBcXbQ',
+    appId: '1:851496697910:ios:a8e5606fa109a92cf41897',
+    messagingSenderId: '851496697910',
+    projectId: 'myresume-dcd44',
+    storageBucket: 'myresume-dcd44.firebasestorage.app',
     iosBundleId: 'com.app.mycv',
   );
 }

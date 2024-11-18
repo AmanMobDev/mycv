@@ -1,13 +1,13 @@
 {
   "project_info": {
-    "project_number": "957734125189",
-    "project_id": "myresume-b669c",
-    "storage_bucket": "myresume-b669c.firebasestorage.app"
+    "project_number": "851496697910",
+    "project_id": "myresume-dcd44",
+    "storage_bucket": "myresume-dcd44.firebasestorage.app"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:957734125189:android:e3a9e8f72b492b9354f3ec",
+        "mobilesdk_app_id": "1:851496697910:android:f22309650e11364ef41897",
         "android_client_info": {
           "package_name": "com.app.mycv"
         }
@@ -15,7 +15,7 @@
       "oauth_client": [],
       "api_key": [
         {
-          "current_key": "AIzaSyACqNSqDTx_g7Lb6sYJq-9569xSGnGivps"
+          "current_key": "AIzaSyAhYzodaMfKhsicphDkMcBPTn7DpGErGpo"
         }
       ],
       "services": {

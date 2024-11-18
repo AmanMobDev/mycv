@@ -1,14 +1,24 @@
-/*******************************************************************************
- *Created By Aman Mishra
- ******************************************************************************/
+import 'package:flutter/material.dart';
 
-import "package:flutter/material.dart";
+import 'dimensions.dart';
 
 class ResponsiveLayout extends StatelessWidget {
-  const ResponsiveLayout({super.key});
+  final Widget mobileBody;
+  final Widget desktopBody;
+
+  const ResponsiveLayout(
+      {super.key, required this.mobileBody, required this.desktopBody});
 
   @override
   Widget build(BuildContext context) {
-    return Container();
+    return LayoutBuilder(
+      builder: (context, constraints) {
+        if (constraints.maxWidth < mobileWidth) {
+          return mobileBody;
+        } else {
+          return desktopBody;
+        }
+      },
+    );
   }
 }
