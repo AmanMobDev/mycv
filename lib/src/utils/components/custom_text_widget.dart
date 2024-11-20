@@ -2,14 +2,14 @@ import 'package:flutter/material.dart';
 
 class CustomTextWidget extends StatelessWidget {
   String? value;
-  FontWeight fontWeight;
+  FontWeight? fontWeight;
   double fontSize;
   Color color;
   TextAlign? textAlign;
   CustomTextWidget(
       {super.key,
       this.value,
-      required this.fontWeight,
+      this.fontWeight,
       required this.fontSize,
       required this.color,
       this.textAlign});
