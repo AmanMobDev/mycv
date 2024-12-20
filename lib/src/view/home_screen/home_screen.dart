@@ -1,15 +1,4 @@
-import 'dart:html' as html;
-
-import 'package:carousel_slider/carousel_slider.dart';
-import 'package:flutter/material.dart';
-import 'package:flutter/services.dart';
-import 'package:flutter_staggered_animations/flutter_staggered_animations.dart';
-import 'package:flutter_svg/svg.dart';
-import 'package:url_launcher/url_launcher.dart';
-
-import '../../utils/assets/assets_path.dart';
-import '../../utils/components/custom_text_widget.dart';
-import '../../utils/responsive/responsive_layout.dart';
+import 'package:mycv/src/utils/exports/my_import.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key});
@@ -83,257 +72,7 @@ class _HomeScreenState extends State<HomeScreen> {
               color: Colors.black,
             ),
           ),
-          drawer: Drawer(
-            backgroundColor: Colors.white,
-            child: Center(
-              child: Column(
-                crossAxisAlignment: CrossAxisAlignment.center,
-                mainAxisAlignment: MainAxisAlignment.center,
-                mainAxisSize: MainAxisSize.max,
-                children: [
-                  const SizedBox(
-                    height: 40.0,
-                  ),
-                  Container(
-                    width: 200,
-                    height: 200,
-                    decoration: BoxDecoration(
-                      color: Colors.grey,
-                      borderRadius:
-                          const BorderRadius.all(Radius.circular(100.0)),
-                      border: Border.all(
-                        color: Colors.black54,
-                        width: 5.0,
-                      ),
-                    ),
-                    child: ClipRRect(
-                      borderRadius: BorderRadius.circular(100.0),
-                      child: Image.asset(
-                        image,
-                        fit: BoxFit.cover,
-                      ),
-                    ),
-                  ),
-                  Expanded(
-                    flex: 1,
-                    child: Column(
-                      crossAxisAlignment: CrossAxisAlignment.center,
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      children: [
-                        GestureDetector(
-                          onTap: () {
-                            _launchURL(link: "https://github.com/AmanMobDev");
-                          },
-                          child: Padding(
-                            padding: const EdgeInsets.symmetric(
-                                horizontal: 10.0, vertical: 8.0),
-                            child: ListTile(
-                              leading: SvgPicture.asset(github1),
-                              title: CustomTextWidget(
-                                value: "GitHub",
-                                fontWeight: FontWeight.w400,
-                                fontSize: 15.0,
-                                color: Colors.black,
-                              ),
-                            ),
-                          ),
-                        ),
-                        GestureDetector(
-                          onTap: () async {
-                            await Clipboard.setData(const ClipboardData(
-                                    text: "aman232mishra@gmail.com"))
-                                .then(
-                              (value) {
-                                var snackBar = SnackBar(
-                                  content: const Text(
-                                    "Email copied successfully.",
-                                    style: TextStyle(
-                                        color: Colors.black,
-                                        fontWeight: FontWeight.bold),
-                                  ),
-                                  shape: BeveledRectangleBorder(
-                                    borderRadius: BorderRadius.circular(10.0),
-                                  ),
-                                  elevation: 10.0,
-                                  behavior: SnackBarBehavior.floating,
-                                  backgroundColor: Colors.grey,
-                                );
-                                ScaffoldMessenger.of(context)
-                                    .showSnackBar(snackBar);
-                              },
-                            );
-
-                            //_lunchEmail();
-                          },
-                          child: Padding(
-                            padding: const EdgeInsets.symmetric(
-                                horizontal: 10.0, vertical: 8.0),
-                            child: ListTile(
-                              leading: SvgPicture.asset(email),
-                              title: CustomTextWidget(
-                                value: "Email",
-                                fontWeight: FontWeight.w400,
-                                fontSize: 15.0,
-                                color: Colors.black,
-                              ),
-                              autofocus: true,
-                            ),
-                          ),
-                        ),
-                        GestureDetector(
-                          onTap: () async {
-                            await Clipboard.setData(
-                              const ClipboardData(
-                                text: "+918543883298",
-                              ),
-                            ).then(
-                              (value) {
-                                var snackBar = SnackBar(
-                                  content: const Text(
-                                    "Mobile number copied successfully.",
-                                    style: TextStyle(
-                                        color: Colors.black,
-                                        fontWeight: FontWeight.bold),
-                                  ),
-                                  shape: BeveledRectangleBorder(
-                                    borderRadius: BorderRadius.circular(10.0),
-                                  ),
-                                  elevation: 10.0,
-                                  behavior: SnackBarBehavior.floating,
-                                  backgroundColor: Colors.grey,
-                                );
-                                ScaffoldMessenger.of(context)
-                                    .showSnackBar(snackBar);
-                              },
-                            );
-                          },
-                          child: Padding(
-                            padding: const EdgeInsets.symmetric(
-                                horizontal: 10.0, vertical: 8.0),
-                            child: ListTile(
-                              leading: SvgPicture.asset(phone),
-                              title: CustomTextWidget(
-                                value: "Phone",
-                                fontWeight: FontWeight.w400,
-                                fontSize: 15.0,
-                                color: Colors.black,
-                              ),
-                              autofocus: true,
-                            ),
-                          ),
-                        ),
-                      ],
-                    ),
-                  ),
-                  AnimationLimiter(
-                    child: Column(
-                      crossAxisAlignment: CrossAxisAlignment.center,
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      mainAxisSize: MainAxisSize.min,
-                      children: AnimationConfiguration.toStaggeredList(
-                        duration: const Duration(seconds: 1),
-                        childAnimationBuilder: (widget) => SlideAnimation(
-                          horizontalOffset: 50.0,
-                          child: FadeInAnimation(
-                            child: widget,
-                          ),
-                        ),
-                        children: [
-                          GestureDetector(
-                            onTap: () {
-                              downloadFile(
-                                  "assets/files/AMAN_MISHRA_FLUTTER_DEVELOPER_5+YEAR.pdf");
-                            },
-                            child: Container(
-                              padding: const EdgeInsets.symmetric(
-                                  horizontal: 15.0, vertical: 8.0),
-                              decoration: BoxDecoration(
-                                border: Border.all(
-                                    width: 2,
-                                    color: Colors.black,
-                                    style: BorderStyle.solid),
-                                borderRadius: const BorderRadius.all(
-                                  Radius.circular(10.0),
-                                ),
-                              ),
-                              child: Row(
-                                crossAxisAlignment: CrossAxisAlignment.center,
-                                mainAxisAlignment: MainAxisAlignment.center,
-                                mainAxisSize: MainAxisSize.min,
-                                children: [
-                                  CustomTextWidget(
-                                    value: "Download CV",
-                                    fontWeight: FontWeight.w400,
-                                    fontSize: 15.0,
-                                    color: Colors.black,
-                                  ),
-                                  const SizedBox(
-                                    width: 20.0,
-                                  ),
-                                  SvgPicture.asset(
-                                    download,
-                                    width: 24.0,
-                                    height: 24.0,
-                                  ),
-                                ],
-                              ),
-                            ),
-                          ),
-                          const SizedBox(
-                            height: 20.0,
-                          ),
-                          GestureDetector(
-                            onTap: () {
-                              _launchURL(
-                                  link:
-                                      "https://www.linkedin.com/in/mishra36152/");
-                            },
-                            child: Container(
-                              padding: const EdgeInsets.symmetric(
-                                  horizontal: 15.0, vertical: 8.0),
-                              decoration: BoxDecoration(
-                                border: Border.all(
-                                    width: 2,
-                                    color: Colors.black,
-                                    style: BorderStyle.solid),
-                                borderRadius: const BorderRadius.all(
-                                  Radius.circular(10.0),
-                                ),
-                              ),
-                              child: Row(
-                                crossAxisAlignment: CrossAxisAlignment.center,
-                                mainAxisAlignment: MainAxisAlignment.center,
-                                mainAxisSize: MainAxisSize.min,
-                                children: [
-                                  CustomTextWidget(
-                                    value: "Let's Connect",
-                                    fontWeight: FontWeight.w400,
-                                    fontSize: 15.0,
-                                    color: Colors.black,
-                                  ),
-                                  const SizedBox(
-                                    width: 20.0,
-                                  ),
-                                  SvgPicture.asset(
-                                    link,
-                                    width: 24.0,
-                                    height: 24.0,
-                                  ),
-                                ],
-                              ),
-                            ),
-                          ),
-                        ],
-                      ),
-                    ),
-                  ),
-                  const SizedBox(
-                    height: 40.0,
-                  ),
-                ],
-              ),
-            ),
-          ),
+          drawer: const CustomDrawer(),
           body: SizedBox(
             width: screenWidth,
             height: screenHeight,
@@ -365,11 +104,21 @@ class _HomeScreenState extends State<HomeScreen> {
                                 mainAxisAlignment: MainAxisAlignment.start,
                                 mainAxisSize: MainAxisSize.max,
                                 children: [
-                                  CustomTextWidget(
-                                    value: "Aman Mishra",
-                                    fontWeight: FontWeight.bold,
-                                    fontSize: 40.0,
-                                    color: Colors.white,
+                                  GestureDetector(
+                                    onTap: () {
+                                      Navigator.of(context).push(
+                                        MaterialPageRoute(
+                                          fullscreenDialog: true,
+                                          builder: (context) => ProjectScreen(),
+                                        ),
+                                      );
+                                    },
+                                    child: CustomTextWidget(
+                                      value: "Aman Mishra",
+                                      fontWeight: FontWeight.bold,
+                                      fontSize: 40.0,
+                                      color: Colors.white,
+                                    ),
                                   ),
                                   CustomTextWidget(
                                     value: "Software Engineer",
@@ -1449,263 +1198,7 @@ class _HomeScreenState extends State<HomeScreen> {
         child: Scaffold(
           body: Row(
             children: [
-              Drawer(
-                backgroundColor: Colors.white,
-                child: Center(
-                  child: Column(
-                    crossAxisAlignment: CrossAxisAlignment.center,
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    mainAxisSize: MainAxisSize.max,
-                    children: [
-                      const SizedBox(
-                        height: 40.0,
-                      ),
-                      Container(
-                        width: 200.0,
-                        height: 200.0,
-                        decoration: BoxDecoration(
-                          color: Colors.grey,
-                          borderRadius:
-                              const BorderRadius.all(Radius.circular(100.0)),
-                          border: Border.all(
-                            color: Colors.black54,
-                            width: 5.0,
-                          ),
-                        ),
-                        child: ClipRRect(
-                          borderRadius: BorderRadius.circular(100.0),
-                          child: Image.asset(
-                            image,
-                            width: 200.0,
-                            height: 200.0,
-                            fit: BoxFit.cover,
-                          ),
-                        ),
-                      ),
-                      Expanded(
-                        flex: 1,
-                        child: Column(
-                          crossAxisAlignment: CrossAxisAlignment.center,
-                          mainAxisAlignment: MainAxisAlignment.center,
-                          mainAxisSize: MainAxisSize.max,
-                          children: [
-                            GestureDetector(
-                              onTap: () {
-                                _launchURL(
-                                    link: "https://github.com/AmanMobDev");
-                              },
-                              child: Padding(
-                                padding: const EdgeInsets.symmetric(
-                                    horizontal: 10.0, vertical: 8.0),
-                                child: ListTile(
-                                  leading: SvgPicture.asset(github1),
-                                  title: CustomTextWidget(
-                                    value: "GitHub",
-                                    fontWeight: FontWeight.w400,
-                                    fontSize: 15.0,
-                                    color: Colors.black,
-                                  ),
-                                ),
-                              ),
-                            ),
-                            GestureDetector(
-                              onTap: () async {
-                                await Clipboard.setData(const ClipboardData(
-                                        text: "aman232mishra@gmail.com"))
-                                    .then(
-                                  (value) {
-                                    var snackBar = SnackBar(
-                                      content: const Text(
-                                        "Email copied successfully.",
-                                        style: TextStyle(
-                                            color: Colors.black,
-                                            fontWeight: FontWeight.bold),
-                                      ),
-                                      shape: BeveledRectangleBorder(
-                                        borderRadius:
-                                            BorderRadius.circular(10.0),
-                                      ),
-                                      elevation: 10.0,
-                                      behavior: SnackBarBehavior.floating,
-                                      backgroundColor: Colors.grey,
-                                    );
-                                    ScaffoldMessenger.of(context)
-                                        .showSnackBar(snackBar);
-                                  },
-                                );
-
-                                //_lunchEmail();
-                              },
-                              child: Padding(
-                                padding: const EdgeInsets.symmetric(
-                                    horizontal: 10.0, vertical: 8.0),
-                                child: ListTile(
-                                  leading: SvgPicture.asset(email),
-                                  title: CustomTextWidget(
-                                    value: "Email",
-                                    fontWeight: FontWeight.w400,
-                                    fontSize: 15.0,
-                                    color: Colors.black,
-                                  ),
-                                ),
-                              ),
-                            ),
-                            GestureDetector(
-                              onTap: () async {
-                                await Clipboard.setData(
-                                  const ClipboardData(
-                                    text: "+918543883298",
-                                  ),
-                                ).then(
-                                  (value) {
-                                    var snackBar = SnackBar(
-                                      content: const Text(
-                                        "Mobile number copied successfully.",
-                                        style: TextStyle(
-                                            color: Colors.black,
-                                            fontWeight: FontWeight.bold),
-                                      ),
-                                      shape: BeveledRectangleBorder(
-                                        borderRadius:
-                                            BorderRadius.circular(10.0),
-                                      ),
-                                      elevation: 10.0,
-                                      behavior: SnackBarBehavior.floating,
-                                      backgroundColor: Colors.grey,
-                                    );
-                                    ScaffoldMessenger.of(context)
-                                        .showSnackBar(snackBar);
-                                  },
-                                );
-                              },
-                              child: Padding(
-                                padding: const EdgeInsets.symmetric(
-                                    horizontal: 10.0, vertical: 8.0),
-                                child: ListTile(
-                                  leading: SvgPicture.asset(phone),
-                                  title: CustomTextWidget(
-                                    value: "Phone",
-                                    fontWeight: FontWeight.w400,
-                                    fontSize: 15.0,
-                                    color: Colors.black,
-                                  ),
-                                ),
-                              ),
-                            ),
-                          ],
-                        ),
-                      ),
-                      AnimationLimiter(
-                        child: Column(
-                          crossAxisAlignment: CrossAxisAlignment.center,
-                          mainAxisAlignment: MainAxisAlignment.center,
-                          mainAxisSize: MainAxisSize.min,
-                          children: AnimationConfiguration.toStaggeredList(
-                            duration: const Duration(seconds: 1),
-                            childAnimationBuilder: (widget) => SlideAnimation(
-                              horizontalOffset: 50.0,
-                              child: FadeInAnimation(
-                                child: widget,
-                              ),
-                            ),
-                            children: [
-                              GestureDetector(
-                                onTap: () {
-                                  downloadFile(
-                                      "assets/files/AMAN_MISHRA_FLUTTER_DEVELOPER_5+YEAR.pdf");
-                                },
-                                child: Container(
-                                  padding: const EdgeInsets.symmetric(
-                                      horizontal: 15.0, vertical: 8.0),
-                                  decoration: BoxDecoration(
-                                    border: Border.all(
-                                        width: 2,
-                                        color: Colors.black,
-                                        style: BorderStyle.solid),
-                                    borderRadius: const BorderRadius.all(
-                                      Radius.circular(10.0),
-                                    ),
-                                  ),
-                                  child: Row(
-                                    crossAxisAlignment:
-                                        CrossAxisAlignment.center,
-                                    mainAxisAlignment: MainAxisAlignment.center,
-                                    mainAxisSize: MainAxisSize.min,
-                                    children: [
-                                      CustomTextWidget(
-                                        value: "Download CV",
-                                        fontWeight: FontWeight.w400,
-                                        fontSize: 15.0,
-                                        color: Colors.black,
-                                      ),
-                                      const SizedBox(
-                                        width: 20.0,
-                                      ),
-                                      SvgPicture.asset(
-                                        download,
-                                        width: 24.0,
-                                        height: 24.0,
-                                      ),
-                                    ],
-                                  ),
-                                ),
-                              ),
-                              const SizedBox(
-                                height: 20.0,
-                              ),
-                              GestureDetector(
-                                onTap: () {
-                                  _launchURL(
-                                      link:
-                                          "https://www.linkedin.com/in/mishra36152/");
-                                },
-                                child: Container(
-                                  padding: const EdgeInsets.symmetric(
-                                      horizontal: 15.0, vertical: 8.0),
-                                  decoration: BoxDecoration(
-                                    border: Border.all(
-                                        width: 2,
-                                        color: Colors.black,
-                                        style: BorderStyle.solid),
-                                    borderRadius: const BorderRadius.all(
-                                      Radius.circular(10.0),
-                                    ),
-                                  ),
-                                  child: Row(
-                                    crossAxisAlignment:
-                                        CrossAxisAlignment.center,
-                                    mainAxisAlignment: MainAxisAlignment.center,
-                                    mainAxisSize: MainAxisSize.min,
-                                    children: [
-                                      CustomTextWidget(
-                                        value: "Let's Connect",
-                                        fontWeight: FontWeight.w400,
-                                        fontSize: 15.0,
-                                        color: Colors.black,
-                                      ),
-                                      const SizedBox(
-                                        width: 20.0,
-                                      ),
-                                      SvgPicture.asset(
-                                        link,
-                                        width: 24.0,
-                                        height: 24.0,
-                                      ),
-                                    ],
-                                  ),
-                                ),
-                              ),
-                            ],
-                          ),
-                        ),
-                      ),
-                      const SizedBox(
-                        height: 40.0,
-                      ),
-                    ],
-                  ),
-                ),
-              ),
+              const CustomDrawer(),
               Expanded(
                 flex: 2,
                 child: Container(
@@ -1737,11 +1230,22 @@ class _HomeScreenState extends State<HomeScreen> {
                                     mainAxisAlignment: MainAxisAlignment.start,
                                     mainAxisSize: MainAxisSize.max,
                                     children: [
-                                      CustomTextWidget(
-                                        value: "Aman Mishra",
-                                        fontWeight: FontWeight.bold,
-                                        fontSize: 40.0,
-                                        color: Colors.white,
+                                      GestureDetector(
+                                        onTap: () {
+                                          Navigator.of(context).push(
+                                            MaterialPageRoute(
+                                              fullscreenDialog: true,
+                                              builder: (context) =>
+                                                  ProjectScreen(),
+                                            ),
+                                          );
+                                        },
+                                        child: CustomTextWidget(
+                                          value: "Aman Mishra",
+                                          fontWeight: FontWeight.bold,
+                                          fontSize: 40.0,
+                                          color: Colors.white,
+                                        ),
                                       ),
                                       const SizedBox(
                                         height: 20.0,
@@ -2877,18 +2381,5 @@ class _HomeScreenState extends State<HomeScreen> {
         ),
       ),
     );
-  }
-
-  _launchURL({required String link}) async {
-    final Uri url = Uri.parse(link);
-    if (!await launchUrl(url)) {
-      throw Exception('Could not launch $url');
-    }
-  }
-
-  void downloadFile(String url) {
-    html.AnchorElement anchorElement = html.AnchorElement(href: url);
-    anchorElement.download = "AMAN_MISHRA_FLUTTER_DEVELOPER_5+YEAR.pdf";
-    anchorElement.click();
   }
 }
