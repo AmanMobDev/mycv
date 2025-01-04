@@ -19,7 +19,6 @@ class _ExpandableTextState extends State<ExpandableText>
   @override
   Widget build(BuildContext context) {
     return ListView(
-      //mainAxisSize: MainAxisSize.min,
       shrinkWrap: true,
       scrollDirection: Axis.vertical,
       children: [

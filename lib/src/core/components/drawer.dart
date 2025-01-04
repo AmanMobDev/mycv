@@ -22,23 +22,12 @@ class CustomDrawer extends StatelessWidget {
             flex: 1,
             child: Padding(
               padding: const EdgeInsets.only(top: 30.0),
-              child: Container(
-                width: 200,
-                height: 200,
-                decoration: BoxDecoration(
-                  color: Colors.grey,
-                  borderRadius: const BorderRadius.all(Radius.circular(100.0)),
-                  border: Border.all(
-                    color: AppColor.black,
-                    width: 5.0,
-                  ),
-                ),
-                child: ClipRRect(
-                  borderRadius: BorderRadius.circular(100.0),
-                  child: Image.asset(
-                    image,
-                    fit: BoxFit.cover,
-                  ),
+              child: ClipRRect(
+                borderRadius: BorderRadius.circular(25.0),
+                clipBehavior: Clip.antiAliasWithSaveLayer, // Image border
+                child: SizedBox.fromSize(
+                  size: const Size.fromRadius(100.0), // Image radius
+                  child: Image.asset(image, fit: BoxFit.cover),
                 ),
               ),
             ),
