@@ -1,4 +1,4 @@
-import 'package:mycv/src/utils/exports/my_import.dart';
+import '../../../../config/export.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key});
@@ -31,26 +31,6 @@ class _HomeScreenState extends State<HomeScreen> {
     api,
     localDB,
     cicd,
-  ];
-
-  List experienceDescription = [
-    "\u2022 Developed and maintained cross-platform mobile apps using Flutter for Android, iOS, and Web.",
-    "\u2022 Implemented BLoC and MVVM architectures to separate business logic from UI, improving app scalability and maintainability.",
-    "\u2022 Integrated Firebase for authentication, real-time database, and push notifications.",
-    "\u2022 Worked with teams to develop RESTful APIs and integrated them into the app for data synchronization.",
-    "\u2022 Collaborated with UX/UI designers to implement modern, responsive app designs.",
-  ];
-
-  List experienceDescription2 = [
-    "\u2022 Developed an offline QR code scanning app for warehouse management.",
-    "\u2022 Created a comprehensive employee management app to track projects, working hours, and more.",
-    "\u2022 Built multi-platform apps for Android, iOS, and Web.",
-    "\u2022 Worked with teams to develop RESTful APIs and integrated them into the app for data synchronization.",
-    "\u2022 Collaborated with UX/UI designers to implement modern, responsive app designs.",
-  ];
-  List experienceDescription3 = [
-    "\u2022 Developed an E-learning app with a coaching management system and integrated Razorpay for payments.",
-    "\u2022 Successfully completed multiple apps, including E-learn and Gym Management.",
   ];
 
   @override
@@ -93,48 +73,6 @@ class _HomeScreenState extends State<HomeScreen> {
                         const SizedBox(
                           height: 20.0,
                         ),
-
-                        /// Name & Title
-                        Column(
-                          children: [
-                            Padding(
-                              padding: const EdgeInsets.all(8.0),
-                              child: Column(
-                                crossAxisAlignment: CrossAxisAlignment.center,
-                                mainAxisAlignment: MainAxisAlignment.start,
-                                mainAxisSize: MainAxisSize.max,
-                                children: [
-                                  GestureDetector(
-                                    onTap: () {
-                                      Navigator.of(context).push(
-                                        MaterialPageRoute(
-                                          fullscreenDialog: true,
-                                          builder: (context) => ProjectScreen(),
-                                        ),
-                                      );
-                                    },
-                                    child: CustomTextWidget(
-                                      value: "Aman Mishra",
-                                      fontWeight: FontWeight.bold,
-                                      fontSize: 40.0,
-                                      color: Colors.white,
-                                    ),
-                                  ),
-                                  CustomTextWidget(
-                                    value: "Software Engineer",
-                                    fontWeight: FontWeight.w400,
-                                    fontSize: 20.0,
-                                    color: Colors.white,
-                                  ),
-                                ],
-                              ),
-                            ),
-                            const SizedBox(
-                              height: 20.0,
-                            ),
-                          ],
-                        ),
-
                         Column(
                           crossAxisAlignment: CrossAxisAlignment.start,
                           mainAxisAlignment: MainAxisAlignment.start,
@@ -418,15 +356,6 @@ class _HomeScreenState extends State<HomeScreen> {
                                         ),
                                       ],
                                     ),
-
-                                    /*CustomTextWidget(
-                                  value:
-                                      "Programming Languages: Dart, Java, Kotlin\nMobile App Development: Flutter, Android SDK\nUI/UX Design: Material Design, Cupertino Design,  Adobe XD, Figma\nVersion Control: Git, Github,  Bitbucket\nDatabase: SQLite, Firebase,  App Write\nAPI Integration: RESTful APIs, JSON, XML\nTools: Android Studio, Visual Studio Code, Git, JIRA,  Postman, Xcode\nTesting: Unit Testing, Widget Testing, Integration Testing.",
-                                  fontWeight: FontWeight.w400,
-                                  fontSize: 15.0,
-                                  color: Colors.white,
-                                  textAlign: TextAlign.justify,
-                                ),*/
                                   ),
                                 ],
                               ),
@@ -508,41 +437,23 @@ class _HomeScreenState extends State<HomeScreen> {
                                       ),
 
                                       ///description
-                                      SizedBox(
-                                        height:
-                                            MediaQuery.sizeOf(context).height *
-                                                0.2,
-                                        child: ListView.builder(
-                                            shrinkWrap: true,
-                                            itemCount:
-                                                experienceDescription.length,
-                                            itemBuilder: (context, index) {
-                                              return Padding(
-                                                padding:
-                                                    const EdgeInsets.symmetric(
-                                                        horizontal: 22.0,
-                                                        vertical: 8.0),
-                                                child: SizedBox(
-                                                  width: MediaQuery.of(context)
-                                                          .size
-                                                          .width *
-                                                      0.9,
-                                                  child: CustomTextWidget(
-                                                    value:
-                                                        experienceDescription[
-                                                            index],
-                                                    fontWeight: FontWeight.w400,
-                                                    fontSize: 14.0,
-                                                    color: Colors.white,
-                                                  ),
-                                                ),
-                                              );
-                                            }),
+                                      Wrap(
+                                        children: [
+                                          Padding(
+                                            padding: const EdgeInsets.symmetric(
+                                                horizontal: 10.0,
+                                                vertical: 8.0),
+                                            child: CustomTextWidget(
+                                              value:
+                                                  "Developed and maintained cross-platform mobile apps using Flutter for Android, iOS, and Web. Implemented BLoC and MVVM architectures to separate business logic from UI, improving app scalability and maintainability. Integrated Firebase for authentication, real-time database, and push notifications.Worked with teams to develop RESTful APIs and integrated them into the app for data synchronization. Collaborated with UX/UI designers to implement modern, responsive app designs.",
+                                              fontWeight: FontWeight.bold,
+                                              fontSize: 13.0,
+                                              color: Colors.white,
+                                            ),
+                                          ),
+                                        ],
                                       ),
                                     ],
-                                  ),
-                                  const SizedBox(
-                                    height: 20.0,
                                   ),
 
                                   /// Second
@@ -607,134 +518,27 @@ class _HomeScreenState extends State<HomeScreen> {
                                       ),
 
                                       ///description
-                                      SizedBox(
-                                        height:
-                                            MediaQuery.sizeOf(context).height *
-                                                0.2,
-                                        child: ListView.builder(
-                                            itemCount:
-                                                experienceDescription2.length,
-                                            itemBuilder: (context, index) {
-                                              return Padding(
-                                                padding:
-                                                    const EdgeInsets.symmetric(
-                                                        horizontal: 22.0,
-                                                        vertical: 8.0),
-                                                child: SizedBox(
-                                                  width: MediaQuery.of(context)
-                                                          .size
-                                                          .width *
-                                                      0.9,
-                                                  child: CustomTextWidget(
-                                                    value:
-                                                        experienceDescription2[
-                                                            index],
-                                                    fontWeight: FontWeight.w400,
-                                                    fontSize: 14.0,
-                                                    color: Colors.white,
-                                                  ),
-                                                ),
-                                              );
-                                            }),
+                                      Wrap(
+                                        children: [
+                                          Padding(
+                                            padding: const EdgeInsets.symmetric(
+                                                horizontal: 10.0,
+                                                vertical: 8.0),
+                                            child: CustomTextWidget(
+                                              value:
+                                                  "Developed an offline QR code scanning app for warehouse management. Created a comprehensive employee management app to track projects, working hours, and more. Built multi-platform apps for Android, iOS, and Web. Worked with teams to develop RESTful APIs and integrated them into the app for data synchronization.Collaborated with UX/UI designers to implement modern, responsive app designs.",
+                                              fontWeight: FontWeight.bold,
+                                              fontSize: 13.0,
+                                              color: Colors.white,
+                                            ),
+                                          ),
+                                        ],
                                       ),
                                     ],
                                   ),
 
                                   const SizedBox(
                                     height: 20.0,
-                                  ),
-
-                                  /// Third
-                                  Column(
-                                    children: [
-                                      ///title
-                                      Padding(
-                                        padding: const EdgeInsets.symmetric(
-                                            horizontal: 10.0, vertical: 8.0),
-                                        child: SizedBox(
-                                          width: MediaQuery.of(context)
-                                                  .size
-                                                  .width *
-                                              0.9,
-                                          child: CustomTextWidget(
-                                            value:
-                                                "Android Developer || UI Designer",
-                                            fontWeight: FontWeight.bold,
-                                            fontSize: 14.0,
-                                            color: Colors.white,
-                                          ),
-                                        ),
-                                      ),
-
-                                      ///company name
-                                      Padding(
-                                        padding: const EdgeInsets.symmetric(
-                                            horizontal: 10.0, vertical: 8.0),
-                                        child: SizedBox(
-                                          width: MediaQuery.of(context)
-                                                  .size
-                                                  .width *
-                                              0.9,
-                                          child: CustomTextWidget(
-                                            value: "Czars India IT Pvt. Ltd",
-                                            fontWeight: FontWeight.w400,
-                                            fontSize: 13.0,
-                                            color: Colors.white,
-                                          ),
-                                        ),
-                                      ),
-
-                                      ///time
-                                      Padding(
-                                        padding: const EdgeInsets.symmetric(
-                                            horizontal: 10.0, vertical: 8.0),
-                                        child: SizedBox(
-                                          width: MediaQuery.of(context)
-                                                  .size
-                                                  .width *
-                                              0.9,
-                                          child: CustomTextWidget(
-                                            value:
-                                                "07/2019 - 02/2020, Kanpur, UP",
-                                            fontWeight: FontWeight.bold,
-                                            fontSize: 13.0,
-                                            color: Colors.white,
-                                          ),
-                                        ),
-                                      ),
-
-                                      ///description
-                                      SizedBox(
-                                        height:
-                                            MediaQuery.sizeOf(context).height *
-                                                0.2,
-                                        child: ListView.builder(
-                                            itemCount:
-                                                experienceDescription3.length,
-                                            itemBuilder: (context, index) {
-                                              return Padding(
-                                                padding:
-                                                    const EdgeInsets.symmetric(
-                                                        horizontal: 22.0,
-                                                        vertical: 8.0),
-                                                child: SizedBox(
-                                                  width: MediaQuery.of(context)
-                                                          .size
-                                                          .width *
-                                                      0.9,
-                                                  child: CustomTextWidget(
-                                                    value:
-                                                        experienceDescription3[
-                                                            index],
-                                                    fontWeight: FontWeight.w400,
-                                                    fontSize: 14.0,
-                                                    color: Colors.white,
-                                                  ),
-                                                ),
-                                              );
-                                            }),
-                                      ),
-                                    ],
                                   ),
                                 ],
                               ),
@@ -960,80 +764,6 @@ class _HomeScreenState extends State<HomeScreen> {
                                           vertical: 10.0,
                                         ),
                                         child: CustomTextWidget(
-                                          value: "LANGUAGES",
-                                          fontWeight: FontWeight.bold,
-                                          fontSize: 15.0,
-                                          color: Colors.white,
-                                        ),
-                                      ),
-                                      Wrap(
-                                        children: [
-                                          Container(
-                                            margin: const EdgeInsets.all(8.0),
-                                            padding: const EdgeInsets.symmetric(
-                                                horizontal: 10.0,
-                                                vertical: 8.0),
-                                            decoration: BoxDecoration(
-                                              border: Border.all(
-                                                  width: 1,
-                                                  color: Colors.white,
-                                                  style: BorderStyle.solid),
-                                              borderRadius:
-                                                  const BorderRadius.all(
-                                                Radius.circular(200.0),
-                                              ),
-                                            ),
-                                            child: CustomTextWidget(
-                                              value: "English (Fluent)",
-                                              fontWeight: FontWeight.bold,
-                                              fontSize: 12.0,
-                                              color: Colors.white,
-                                            ),
-                                          ),
-                                          Container(
-                                            margin: const EdgeInsets.all(8.0),
-                                            padding: const EdgeInsets.symmetric(
-                                                horizontal: 20.0,
-                                                vertical: 8.0),
-                                            decoration: BoxDecoration(
-                                              border: Border.all(
-                                                  width: 1,
-                                                  color: Colors.white,
-                                                  style: BorderStyle.solid),
-                                              borderRadius:
-                                                  const BorderRadius.all(
-                                                Radius.circular(200.0),
-                                              ),
-                                            ),
-                                            child: CustomTextWidget(
-                                              value: "Hindi (Fluent)",
-                                              fontWeight: FontWeight.bold,
-                                              fontSize: 12.0,
-                                              color: Colors.white,
-                                            ),
-                                          ),
-                                        ],
-                                      ),
-                                    ],
-                                  ),
-                                ),
-                                const SizedBox(
-                                  height: 20.0,
-                                ),
-                                Padding(
-                                  padding: const EdgeInsets.all(8.0),
-                                  child: Column(
-                                    crossAxisAlignment:
-                                        CrossAxisAlignment.start,
-                                    mainAxisAlignment: MainAxisAlignment.start,
-                                    mainAxisSize: MainAxisSize.max,
-                                    children: [
-                                      Padding(
-                                        padding: const EdgeInsets.symmetric(
-                                          horizontal: 10.0,
-                                          vertical: 10.0,
-                                        ),
-                                        child: CustomTextWidget(
                                           value: "SOFT SKILLS",
                                           fontWeight: FontWeight.bold,
                                           fontSize: 15.0,
@@ -1179,6 +909,80 @@ class _HomeScreenState extends State<HomeScreen> {
                                     ],
                                   ),
                                 ),
+                                const SizedBox(
+                                  height: 20.0,
+                                ),
+                                Padding(
+                                  padding: const EdgeInsets.all(8.0),
+                                  child: Column(
+                                    crossAxisAlignment:
+                                        CrossAxisAlignment.start,
+                                    mainAxisAlignment: MainAxisAlignment.start,
+                                    mainAxisSize: MainAxisSize.max,
+                                    children: [
+                                      Padding(
+                                        padding: const EdgeInsets.symmetric(
+                                          horizontal: 10.0,
+                                          vertical: 10.0,
+                                        ),
+                                        child: CustomTextWidget(
+                                          value: "LANGUAGES",
+                                          fontWeight: FontWeight.bold,
+                                          fontSize: 15.0,
+                                          color: Colors.white,
+                                        ),
+                                      ),
+                                      Wrap(
+                                        children: [
+                                          Container(
+                                            margin: const EdgeInsets.all(8.0),
+                                            padding: const EdgeInsets.symmetric(
+                                                horizontal: 10.0,
+                                                vertical: 8.0),
+                                            decoration: BoxDecoration(
+                                              border: Border.all(
+                                                  width: 1,
+                                                  color: Colors.white,
+                                                  style: BorderStyle.solid),
+                                              borderRadius:
+                                                  const BorderRadius.all(
+                                                Radius.circular(200.0),
+                                              ),
+                                            ),
+                                            child: CustomTextWidget(
+                                              value: "English (Fluent)",
+                                              fontWeight: FontWeight.bold,
+                                              fontSize: 12.0,
+                                              color: Colors.white,
+                                            ),
+                                          ),
+                                          Container(
+                                            margin: const EdgeInsets.all(8.0),
+                                            padding: const EdgeInsets.symmetric(
+                                                horizontal: 20.0,
+                                                vertical: 8.0),
+                                            decoration: BoxDecoration(
+                                              border: Border.all(
+                                                  width: 1,
+                                                  color: Colors.white,
+                                                  style: BorderStyle.solid),
+                                              borderRadius:
+                                                  const BorderRadius.all(
+                                                Radius.circular(200.0),
+                                              ),
+                                            ),
+                                            child: CustomTextWidget(
+                                              value: "Hindi (Fluent)",
+                                              fontWeight: FontWeight.bold,
+                                              fontSize: 12.0,
+                                              color: Colors.white,
+                                            ),
+                                          ),
+                                        ],
+                                      ),
+                                    ],
+                                  ),
+                                ),
                               ],
                             ),
                           ],
@@ -1202,7 +1006,9 @@ class _HomeScreenState extends State<HomeScreen> {
               Expanded(
                 flex: 2,
                 child: Container(
-                  color: Colors.black,
+                  width: screenWidth,
+                  height: screenHeight,
+                  color: AppColor.black,
                   child: SingleChildScrollView(
                     child: AnimationLimiter(
                       child: Column(
@@ -1236,7 +1042,7 @@ class _HomeScreenState extends State<HomeScreen> {
                                             MaterialPageRoute(
                                               fullscreenDialog: true,
                                               builder: (context) =>
-                                                  ProjectScreen(),
+                                                  const ProjectScreen(),
                                             ),
                                           );
                                         },
@@ -1361,7 +1167,7 @@ class _HomeScreenState extends State<HomeScreen> {
                                     value: "SKILLS",
                                     fontWeight: FontWeight.bold,
                                     fontSize: 20.0,
-                                    color: Colors.white,
+                                    color: AppColor.white,
                                   ),
                                   const SizedBox(
                                     height: 20.0,
@@ -1583,7 +1389,7 @@ class _HomeScreenState extends State<HomeScreen> {
                                         value: "EXPERIENCE",
                                         fontWeight: FontWeight.bold,
                                         fontSize: 20.0,
-                                        color: Colors.white,
+                                        color: AppColor.white,
                                       ),
                                       const SizedBox(
                                         height: 10,
@@ -1656,52 +1462,29 @@ class _HomeScreenState extends State<HomeScreen> {
                                           ),
 
                                           ///description
-                                          SizedBox(
-                                            height: MediaQuery.sizeOf(context)
-                                                    .height *
-                                                0.2,
-                                            child: ListView.builder(
-                                                itemCount: experienceDescription
-                                                    .length,
-                                                itemBuilder: (context, index) {
-                                                  return Padding(
-                                                    padding: const EdgeInsets
-                                                        .symmetric(
-                                                        horizontal: 22.0,
+                                          Wrap(
+                                            children: [
+                                              Padding(
+                                                padding:
+                                                    const EdgeInsets.symmetric(
+                                                        horizontal: 10.0,
                                                         vertical: 8.0),
-                                                    child: SizedBox(
-                                                      width:
-                                                          MediaQuery.of(context)
-                                                                  .size
-                                                                  .width *
-                                                              0.9,
-                                                      child: CustomTextWidget(
-                                                        value:
-                                                            experienceDescription[
-                                                                index],
-                                                        fontWeight:
-                                                            FontWeight.w400,
-                                                        fontSize: 14.0,
-                                                        color: Colors.white,
-                                                      ),
-                                                    ),
-                                                  );
-                                                }),
+                                                child: CustomTextWidget(
+                                                  value:
+                                                      "Developed and maintained cross-platform mobile apps using Flutter for Android, iOS, and Web. Implemented BLoC and MVVM architectures to separate business logic from UI, improving app scalability and maintainability. Integrated Firebase for authentication, real-time database, and push notifications.Worked with teams to develop RESTful APIs and integrated them into the app for data synchronization. Collaborated with UX/UI designers to implement modern, responsive app designs.",
+                                                  fontWeight: FontWeight.bold,
+                                                  fontSize: 13.0,
+                                                  color: AppColor.white,
+                                                ),
+                                              ),
+                                            ],
                                           ),
                                         ],
-                                      ),
-                                      const SizedBox(
-                                        height: 20.0,
                                       ),
 
                                       /// Second
 
                                       Column(
-                                        crossAxisAlignment:
-                                            CrossAxisAlignment.start,
-                                        mainAxisSize: MainAxisSize.max,
-                                        mainAxisAlignment:
-                                            MainAxisAlignment.start,
                                         children: [
                                           ///title
                                           Padding(
@@ -1737,7 +1520,7 @@ class _HomeScreenState extends State<HomeScreen> {
                                                 value:
                                                     "Eglogics Softech IT Pvt Ltd",
                                                 fontWeight: FontWeight.w400,
-                                                fontSize: 12.0,
+                                                fontSize: 13.0,
                                                 color: Colors.white,
                                               ),
                                             ),
@@ -1757,156 +1540,35 @@ class _HomeScreenState extends State<HomeScreen> {
                                                 value:
                                                     "03/2020 - 05/2021, Kanpur,UP",
                                                 fontWeight: FontWeight.bold,
-                                                fontSize: 14.0,
+                                                fontSize: 13.0,
                                                 color: Colors.white,
                                               ),
                                             ),
                                           ),
 
                                           ///description
-                                          SizedBox(
-                                            height: MediaQuery.sizeOf(context)
-                                                    .height *
-                                                0.2,
-                                            child: ListView.builder(
-                                                itemCount:
-                                                    experienceDescription2
-                                                        .length,
-                                                itemBuilder: (context, index) {
-                                                  return Padding(
-                                                    padding: const EdgeInsets
-                                                        .symmetric(
-                                                        horizontal: 22.0,
+                                          Wrap(
+                                            children: [
+                                              Padding(
+                                                padding:
+                                                    const EdgeInsets.symmetric(
+                                                        horizontal: 10.0,
                                                         vertical: 8.0),
-                                                    child: SizedBox(
-                                                      width:
-                                                          MediaQuery.of(context)
-                                                                  .size
-                                                                  .width *
-                                                              0.9,
-                                                      child: CustomTextWidget(
-                                                        value:
-                                                            experienceDescription2[
-                                                                index],
-                                                        fontWeight:
-                                                            FontWeight.w400,
-                                                        fontSize: 14.0,
-                                                        color: Colors.white,
-                                                      ),
-                                                    ),
-                                                  );
-                                                }),
+                                                child: CustomTextWidget(
+                                                  value:
+                                                      "Developed an offline QR code scanning app for warehouse management. Created a comprehensive employee management app to track projects, working hours, and more. Built multi-platform apps for Android, iOS, and Web. Worked with teams to develop RESTful APIs and integrated them into the app for data synchronization.Collaborated with UX/UI designers to implement modern, responsive app designs.",
+                                                  fontWeight: FontWeight.bold,
+                                                  fontSize: 13.0,
+                                                  color: Colors.white,
+                                                ),
+                                              ),
+                                            ],
                                           ),
                                         ],
                                       ),
 
                                       const SizedBox(
                                         height: 20.0,
-                                      ),
-
-                                      /// Third
-                                      Column(
-                                        crossAxisAlignment:
-                                            CrossAxisAlignment.start,
-                                        mainAxisSize: MainAxisSize.max,
-                                        mainAxisAlignment:
-                                            MainAxisAlignment.start,
-                                        children: [
-                                          ///title
-                                          Padding(
-                                            padding: const EdgeInsets.symmetric(
-                                                horizontal: 10.0,
-                                                vertical: 8.0),
-                                            child: SizedBox(
-                                              width: MediaQuery.of(context)
-                                                      .size
-                                                      .width *
-                                                  0.9,
-                                              child: CustomTextWidget(
-                                                value:
-                                                    "Android Developer || UI Designer",
-                                                fontWeight: FontWeight.bold,
-                                                fontSize: 14.0,
-                                                color: Colors.white,
-                                              ),
-                                            ),
-                                          ),
-
-                                          ///company name
-                                          Padding(
-                                            padding: const EdgeInsets.symmetric(
-                                                horizontal: 10.0,
-                                                vertical: 8.0),
-                                            child: SizedBox(
-                                              width: MediaQuery.of(context)
-                                                      .size
-                                                      .width *
-                                                  0.9,
-                                              child: CustomTextWidget(
-                                                value:
-                                                    "Czars India IT Pvt. Ltd",
-                                                fontWeight: FontWeight.w400,
-                                                fontSize: 12.0,
-                                                color: Colors.white,
-                                              ),
-                                            ),
-                                          ),
-
-                                          ///time
-                                          Padding(
-                                            padding: const EdgeInsets.symmetric(
-                                                horizontal: 10.0,
-                                                vertical: 8.0),
-                                            child: SizedBox(
-                                              width: MediaQuery.of(context)
-                                                      .size
-                                                      .width *
-                                                  0.9,
-                                              child: CustomTextWidget(
-                                                value:
-                                                    "07/2019 - 02/2020, Kanpur, UP",
-                                                fontWeight: FontWeight.bold,
-                                                fontSize: 14.0,
-                                                color: Colors.white,
-                                              ),
-                                            ),
-                                          ),
-
-                                          ///description
-                                          SizedBox(
-                                            height: MediaQuery.sizeOf(context)
-                                                    .height *
-                                                0.2,
-                                            child: ListView.builder(
-                                                itemCount:
-                                                    experienceDescription3
-                                                        .length,
-                                                itemBuilder: (context, index) {
-                                                  return Padding(
-                                                    padding: const EdgeInsets
-                                                        .symmetric(
-                                                        horizontal: 22.0,
-                                                        vertical: 8.0),
-                                                    child: SizedBox(
-                                                      width:
-                                                          MediaQuery.of(context)
-                                                                  .size
-                                                                  .width *
-                                                              0.9,
-                                                      child: CustomTextWidget(
-                                                        value:
-                                                            experienceDescription3[
-                                                                index],
-                                                        fontWeight:
-                                                            FontWeight.w400,
-                                                        fontSize: 14.0,
-                                                        color: Colors.white,
-                                                      ),
-                                                    ),
-                                                  );
-                                                }),
-                                          ),
-                                        ],
                                       ),
                                     ],
                                   ),
@@ -1923,11 +1585,12 @@ class _HomeScreenState extends State<HomeScreen> {
               Expanded(
                 flex: 1,
                 child: Container(
-                  color: Colors.black,
-                  height: MediaQuery.sizeOf(context).height,
-                  width: MediaQuery.sizeOf(context).width,
+                  color: AppColor.black,
+                  height: screenHeight,
+                  width: screenWidth,
                   child: AnimationLimiter(
                     child: ListView(
+                      shrinkWrap: true,
                       children: AnimationConfiguration.toStaggeredList(
                         duration: const Duration(seconds: 1),
                         childAnimationBuilder: (widget) => SlideAnimation(
@@ -2158,77 +1821,6 @@ class _HomeScreenState extends State<HomeScreen> {
                                         vertical: 10.0,
                                       ),
                                       child: CustomTextWidget(
-                                        value: "LANGUAGES",
-                                        fontWeight: FontWeight.bold,
-                                        fontSize: 15.0,
-                                        color: Colors.white,
-                                      ),
-                                    ),
-                                    Wrap(
-                                      children: [
-                                        Container(
-                                          margin: const EdgeInsets.all(8.0),
-                                          padding: const EdgeInsets.symmetric(
-                                              horizontal: 10.0, vertical: 8.0),
-                                          decoration: BoxDecoration(
-                                            border: Border.all(
-                                                width: 1,
-                                                color: Colors.white,
-                                                style: BorderStyle.solid),
-                                            borderRadius:
-                                                const BorderRadius.all(
-                                              Radius.circular(200.0),
-                                            ),
-                                          ),
-                                          child: CustomTextWidget(
-                                            value: "English (Fluent)",
-                                            fontWeight: FontWeight.bold,
-                                            fontSize: 12.0,
-                                            color: Colors.white,
-                                          ),
-                                        ),
-                                        Container(
-                                          margin: const EdgeInsets.all(8.0),
-                                          padding: const EdgeInsets.symmetric(
-                                              horizontal: 20.0, vertical: 8.0),
-                                          decoration: BoxDecoration(
-                                            border: Border.all(
-                                                width: 1,
-                                                color: Colors.white,
-                                                style: BorderStyle.solid),
-                                            borderRadius:
-                                                const BorderRadius.all(
-                                              Radius.circular(200.0),
-                                            ),
-                                          ),
-                                          child: CustomTextWidget(
-                                            value: "Hindi (Fluent)",
-                                            fontWeight: FontWeight.bold,
-                                            fontSize: 12.0,
-                                            color: Colors.white,
-                                          ),
-                                        ),
-                                      ],
-                                    ),
-                                  ],
-                                ),
-                              ),
-                              const SizedBox(
-                                height: 20.0,
-                              ),
-                              Padding(
-                                padding: const EdgeInsets.all(8.0),
-                                child: Column(
-                                  crossAxisAlignment: CrossAxisAlignment.start,
-                                  mainAxisAlignment: MainAxisAlignment.start,
-                                  mainAxisSize: MainAxisSize.max,
-                                  children: [
-                                    Padding(
-                                      padding: const EdgeInsets.symmetric(
-                                        horizontal: 10.0,
-                                        vertical: 10.0,
-                                      ),
-                                      child: CustomTextWidget(
                                         value: "SOFT SKILLS",
                                         fontWeight: FontWeight.bold,
                                         fontSize: 15.0,
@@ -2358,6 +1950,77 @@ class _HomeScreenState extends State<HomeScreen> {
                                           ),
                                           child: CustomTextWidget(
                                             value: "Time Management",
+                                            fontWeight: FontWeight.bold,
+                                            fontSize: 12.0,
+                                            color: Colors.white,
+                                          ),
+                                        ),
+                                      ],
+                                    ),
+                                  ],
+                                ),
+                              ),
+                              const SizedBox(
+                                height: 20.0,
+                              ),
+                              Padding(
+                                padding: const EdgeInsets.all(8.0),
+                                child: Column(
+                                  crossAxisAlignment: CrossAxisAlignment.start,
+                                  mainAxisAlignment: MainAxisAlignment.start,
+                                  mainAxisSize: MainAxisSize.max,
+                                  children: [
+                                    Padding(
+                                      padding: const EdgeInsets.symmetric(
+                                        horizontal: 10.0,
+                                        vertical: 10.0,
+                                      ),
+                                      child: CustomTextWidget(
+                                        value: "LANGUAGES",
+                                        fontWeight: FontWeight.bold,
+                                        fontSize: 15.0,
+                                        color: Colors.white,
+                                      ),
+                                    ),
+                                    Wrap(
+                                      children: [
+                                        Container(
+                                          margin: const EdgeInsets.all(8.0),
+                                          padding: const EdgeInsets.symmetric(
+                                              horizontal: 10.0, vertical: 8.0),
+                                          decoration: BoxDecoration(
+                                            border: Border.all(
+                                                width: 1,
+                                                color: Colors.white,
+                                                style: BorderStyle.solid),
+                                            borderRadius:
+                                                const BorderRadius.all(
+                                              Radius.circular(200.0),
+                                            ),
+                                          ),
+                                          child: CustomTextWidget(
+                                            value: "English (Fluent)",
+                                            fontWeight: FontWeight.bold,
+                                            fontSize: 12.0,
+                                            color: Colors.white,
+                                          ),
+                                        ),
+                                        Container(
+                                          margin: const EdgeInsets.all(8.0),
+                                          padding: const EdgeInsets.symmetric(
+                                              horizontal: 20.0, vertical: 8.0),
+                                          decoration: BoxDecoration(
+                                            border: Border.all(
+                                                width: 1,
+                                                color: Colors.white,
+                                                style: BorderStyle.solid),
+                                            borderRadius:
+                                                const BorderRadius.all(
+                                              Radius.circular(200.0),
+                                            ),
+                                          ),
+                                          child: CustomTextWidget(
+                                            value: "Hindi (Fluent)",
                                             fontWeight: FontWeight.bold,
                                             fontSize: 12.0,
                                             color: Colors.white,
