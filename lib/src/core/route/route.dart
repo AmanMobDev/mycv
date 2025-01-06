@@ -1,9 +1,9 @@
+import '../../config/export.dart';
+
 /*******************************************************************************
  *Created By Aman Mishra
  * This file is used for define all route.
  ******************************************************************************/
-
-import '../export.dart';
 
 class Routes {
   static Route<dynamic> generateRoutes(RouteSettings settings) {

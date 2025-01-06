@@ -18,17 +18,14 @@ class CustomDrawer extends StatelessWidget {
         mainAxisSize: MainAxisSize.min,
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
-          Flexible(
-            flex: 1,
-            child: Padding(
-              padding: const EdgeInsets.only(top: 30.0),
-              child: ClipRRect(
-                borderRadius: BorderRadius.circular(25.0),
-                clipBehavior: Clip.antiAliasWithSaveLayer, // Image border
-                child: SizedBox.fromSize(
-                  size: const Size.fromRadius(100.0), // Image radius
-                  child: Image.asset(image, fit: BoxFit.cover),
-                ),
+          Padding(
+            padding: const EdgeInsets.only(top: 30.0),
+            child: ClipRRect(
+              borderRadius: BorderRadius.circular(100.0),
+              clipBehavior: Clip.antiAliasWithSaveLayer, // Image border
+              child: SizedBox.fromSize(
+                size: const Size.fromRadius(100.0), // Image radius
+                child: Image.asset(image, fit: BoxFit.cover),
               ),
             ),
           ),
@@ -48,8 +45,7 @@ class CustomDrawer extends StatelessWidget {
                         );
                       },
                       child: Padding(
-                        padding: const EdgeInsets.symmetric(
-                            horizontal: 10.0, vertical: 8.0),
+                        padding: const EdgeInsets.symmetric(horizontal: 10.0),
                         child: ListTile(
                           leading: SvgPicture.asset(
                             home,
@@ -74,7 +70,8 @@ class CustomDrawer extends StatelessWidget {
                       },
                       child: Padding(
                         padding: const EdgeInsets.symmetric(
-                            horizontal: 10.0, vertical: 8.0),
+                          horizontal: 10.0,
+                        ),
                         child: ListTile(
                           leading: SvgPicture.asset(
                             project,
@@ -99,7 +96,8 @@ class CustomDrawer extends StatelessWidget {
                       },
                       child: Padding(
                         padding: const EdgeInsets.symmetric(
-                            horizontal: 10.0, vertical: 8.0),
+                          horizontal: 10.0,
+                        ),
                         child: ListTile(
                           leading: SvgPicture.asset(
                             certificate,
@@ -121,7 +119,8 @@ class CustomDrawer extends StatelessWidget {
                       },
                       child: Padding(
                         padding: const EdgeInsets.symmetric(
-                            horizontal: 10.0, vertical: 8.0),
+                          horizontal: 10.0,
+                        ),
                         child: ListTile(
                           leading: SvgPicture.asset(
                             github1,
@@ -166,7 +165,8 @@ class CustomDrawer extends StatelessWidget {
                       },
                       child: Padding(
                         padding: const EdgeInsets.symmetric(
-                            horizontal: 10.0, vertical: 8.0),
+                          horizontal: 10.0,
+                        ),
                         child: ListTile(
                           leading: SvgPicture.asset(
                             email,
@@ -211,7 +211,8 @@ class CustomDrawer extends StatelessWidget {
                       },
                       child: Padding(
                         padding: const EdgeInsets.symmetric(
-                            horizontal: 10.0, vertical: 8.0),
+                          horizontal: 10.0,
+                        ),
                         child: ListTile(
                           leading: SvgPicture.asset(
                             phone,
@@ -232,109 +233,106 @@ class CustomDrawer extends StatelessWidget {
               ),
             ),
           ),
-          Flexible(
-            flex: 1,
-            child: AnimationLimiter(
-              child: Padding(
-                padding: const EdgeInsets.all(10.0),
-                child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.center,
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  mainAxisSize: MainAxisSize.min,
-                  children: AnimationConfiguration.toStaggeredList(
-                    duration: const Duration(seconds: 1),
-                    childAnimationBuilder: (widget) => SlideAnimation(
-                      horizontalOffset: 50.0,
-                      child: FadeInAnimation(
-                        child: widget,
+          AnimationLimiter(
+            child: Padding(
+              padding: const EdgeInsets.all(10.0),
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.center,
+                mainAxisAlignment: MainAxisAlignment.center,
+                mainAxisSize: MainAxisSize.min,
+                children: AnimationConfiguration.toStaggeredList(
+                  duration: const Duration(seconds: 1),
+                  childAnimationBuilder: (widget) => SlideAnimation(
+                    horizontalOffset: 50.0,
+                    child: FadeInAnimation(
+                      child: widget,
+                    ),
+                  ),
+                  children: [
+                    GestureDetector(
+                      onTap: () {
+                        downloadFile(
+                            "assets/files/AMAN_MISHRA_FLUTTER_DEVELOPER_5+YEAR.pdf");
+                      },
+                      child: Container(
+                        padding: const EdgeInsets.symmetric(
+                            horizontal: 15.0, vertical: 8.0),
+                        decoration: BoxDecoration(
+                          border: Border.all(
+                              width: 2,
+                              color: Colors.black,
+                              style: BorderStyle.solid),
+                          borderRadius: const BorderRadius.all(
+                            Radius.circular(10.0),
+                          ),
+                        ),
+                        child: Row(
+                          crossAxisAlignment: CrossAxisAlignment.center,
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          mainAxisSize: MainAxisSize.min,
+                          children: [
+                            CustomTextWidget(
+                              value: AppString.downloadCV,
+                              fontWeight: FontWeight.w400,
+                              fontSize: 15.0,
+                              color: Colors.black,
+                            ),
+                            const SizedBox(
+                              width: 20.0,
+                            ),
+                            SvgPicture.asset(
+                              download,
+                              width: 24.0,
+                              height: 24.0,
+                            ),
+                          ],
+                        ),
                       ),
                     ),
-                    children: [
-                      GestureDetector(
-                        onTap: () {
-                          downloadFile(
-                              "assets/files/AMAN_MISHRA_FLUTTER_DEVELOPER_5+YEAR.pdf");
-                        },
-                        child: Container(
-                          padding: const EdgeInsets.symmetric(
-                              horizontal: 15.0, vertical: 8.0),
-                          decoration: BoxDecoration(
-                            border: Border.all(
-                                width: 2,
-                                color: Colors.black,
-                                style: BorderStyle.solid),
-                            borderRadius: const BorderRadius.all(
-                              Radius.circular(10.0),
-                            ),
-                          ),
-                          child: Row(
-                            crossAxisAlignment: CrossAxisAlignment.center,
-                            mainAxisAlignment: MainAxisAlignment.center,
-                            mainAxisSize: MainAxisSize.min,
-                            children: [
-                              CustomTextWidget(
-                                value: AppString.downloadCV,
-                                fontWeight: FontWeight.w400,
-                                fontSize: 15.0,
-                                color: Colors.black,
-                              ),
-                              const SizedBox(
-                                width: 20.0,
-                              ),
-                              SvgPicture.asset(
-                                download,
-                                width: 24.0,
-                                height: 24.0,
-                              ),
-                            ],
+                    const SizedBox(
+                      height: 20.0,
+                    ),
+                    GestureDetector(
+                      onTap: () {
+                        launchURL(
+                            link: "https://www.linkedin.com/in/mishra36152/");
+                      },
+                      child: Container(
+                        padding: const EdgeInsets.symmetric(
+                            horizontal: 15.0, vertical: 8.0),
+                        decoration: BoxDecoration(
+                          border: Border.all(
+                              width: 2,
+                              color: Colors.black,
+                              style: BorderStyle.solid),
+                          borderRadius: const BorderRadius.all(
+                            Radius.circular(10.0),
                           ),
                         ),
-                      ),
-                      const SizedBox(
-                        height: 20.0,
-                      ),
-                      GestureDetector(
-                        onTap: () {
-                          launchURL(
-                              link: "https://www.linkedin.com/in/mishra36152/");
-                        },
-                        child: Container(
-                          padding: const EdgeInsets.symmetric(
-                              horizontal: 15.0, vertical: 8.0),
-                          decoration: BoxDecoration(
-                            border: Border.all(
-                                width: 2,
-                                color: Colors.black,
-                                style: BorderStyle.solid),
-                            borderRadius: const BorderRadius.all(
-                              Radius.circular(10.0),
+                        child: Row(
+                          crossAxisAlignment: CrossAxisAlignment.center,
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          mainAxisSize: MainAxisSize.min,
+                          children: [
+                            CustomTextWidget(
+                              value: AppString.letsConnect,
+                              fontWeight: FontWeight.w400,
+                              fontSize: 15.0,
+                              color: Colors.black,
                             ),
-                          ),
-                          child: Row(
-                            crossAxisAlignment: CrossAxisAlignment.center,
-                            mainAxisAlignment: MainAxisAlignment.center,
-                            mainAxisSize: MainAxisSize.min,
-                            children: [
-                              CustomTextWidget(
-                                value: AppString.letsConnect,
-                                fontWeight: FontWeight.w400,
-                                fontSize: 15.0,
-                                color: Colors.black,
-                              ),
-                              const SizedBox(
-                                width: 20.0,
-                              ),
-                              SvgPicture.asset(
-                                link,
-                                width: 24.0,
-                                height: 24.0,
-                              ),
-                            ],
-                          ),
+                            const SizedBox(
+                              width: 20.0,
+                            ),
+                            SvgPicture.asset(
+                              link,
+                              width: 24.0,
+                              height: 24.0,
+                            ),
+                          ],
                         ),
                       ),
-                    ],
-                  ),
+                    ),
+                  ],
                 ),
               ),
             ),

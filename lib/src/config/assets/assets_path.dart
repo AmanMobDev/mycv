@@ -10,6 +10,7 @@ const iconPath = "assets/icons/";
 
 ///files path
 const fliesPath = "assets/files/";
+const envPath = "assets/";
 
 /// Images
 const image = "${imagePath}aman1.JPG";
@@ -47,3 +48,4 @@ const certificate = "${iconPath}certificate.svg";
 ///Assets
 
 const cv = "${iconPath}certificate.svg";
+const env = "$envPath${".env"}";

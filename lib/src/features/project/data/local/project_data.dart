@@ -19,7 +19,7 @@ Map<String, dynamic> dataProject = {
       "imageLink":
           "https://miro.medium.com/v2/resize:fit:813/1*j9-O4DcaYTBTlSjckaFqXA.png",
       "description":
-          "Implemented the MVVM (Model-View-ViewModel) architecture in an academic project to separate UI from business logic. MVVM organizes code into three layers:\n● Model: Manages data and business logic\n● View: Displays UI and binds to the ViewModel\n● ViewModel: Handles data transformation and provides data to the view This design improves app maintainability, scalability, and testability, while promoting clean code and better separation of concerns.",
+          "Implemented the MVVM (Model-View-ViewModel) architecture in an academic project to separate UI from business logic. MVVM organizes code into three layers:\n● Model: Manages data and business logic\n● View: Displays UI and binds to the ViewModel\n● ViewModel: Handles data transformation and provides data to the pages This design improves app maintainability, scalability, and testability, while promoting clean code and better separation of concerns.",
     },
     {
       "title": "Flutter bloc pattern",
