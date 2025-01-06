@@ -48,4 +48,4 @@ const certificate = "${iconPath}certificate.svg";
 ///Assets
 
 const cv = "${iconPath}certificate.svg";
-const env = "$envPath${".env"}";
+const env = "assets/.env";

@@ -8,7 +8,6 @@ export 'package:carousel_slider/carousel_slider.dart';
 export 'package:firebase_core/firebase_core.dart';
 export 'package:flutter/material.dart';
 export 'package:flutter/services.dart';
-export 'package:flutter_dotenv/flutter_dotenv.dart';
 export 'package:flutter_staggered_animations/flutter_staggered_animations.dart';
 export 'package:flutter_svg/svg.dart';
 export 'package:mycv/src/config/assets/assets_path.dart';
