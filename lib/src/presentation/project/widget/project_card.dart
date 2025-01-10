@@ -1,7 +1,5 @@
 import 'package:mycv/src/config/export.dart';
 
-import '../../../../core/components/expandable_text.dart';
-
 /*******************************************************************************
  *Created By Aman Mishra
  ******************************************************************************/

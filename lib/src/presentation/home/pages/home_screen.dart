@@ -1,4 +1,4 @@
-import '../../../../config/export.dart';
+import 'package:mycv/src/config/export.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key});
