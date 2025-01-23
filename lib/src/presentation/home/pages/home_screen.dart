@@ -100,8 +100,7 @@ class _HomeScreenState extends State<HomeScreen> {
                                     width:
                                         MediaQuery.of(context).size.width * 0.9,
                                     child: CustomTextWidget(
-                                      value:
-                                          "Motivated Flutter Developer and Team Lead with over 5 years of experience in leading cross-functional teams, building high-quality mobile applications, and delivering projects on time. Adept at driving operational improvements, resolving complex issues, and optimizing workflows. Proven ability to manage large-scale projects, enhance customer satisfaction, and consistently exceed quality and performance benchmarks. Expertise in Flutter, Dart, and mobile app development, with a track record of successful project delivery.",
+                                      value: AppString.summary,
                                       fontWeight: FontWeight.w400,
                                       fontSize: 15.0,
                                       color: Colors.white,
@@ -194,7 +193,7 @@ class _HomeScreenState extends State<HomeScreen> {
                                               width: 10.0,
                                             ),
                                             CustomTextWidget(
-                                              value: "Dart, Java, Kotlin",
+                                              value: "Dart, Java, Kotlin, iOS",
                                               fontSize: 14.0,
                                               color: Colors.white,
                                             ),
@@ -444,90 +443,8 @@ class _HomeScreenState extends State<HomeScreen> {
                                                 horizontal: 10.0,
                                                 vertical: 8.0),
                                             child: CustomTextWidget(
-                                              value:
-                                                  "Developed and maintained cross-platform mobile apps using Flutter for Android, iOS, and Web. Implemented BLoC and MVVM architectures to separate business logic from UI, improving app scalability and maintainability. Integrated Firebase for authentication, real-time database, and push notifications.Worked with teams to develop RESTful APIs and integrated them into the app for data synchronization. Collaborated with UX/UI designers to implement modern, responsive app designs.",
-                                              fontWeight: FontWeight.bold,
-                                              fontSize: 13.0,
-                                              color: Colors.white,
-                                            ),
-                                          ),
-                                        ],
-                                      ),
-                                    ],
-                                  ),
-
-                                  /// Second
-
-                                  Column(
-                                    children: [
-                                      ///title
-                                      Padding(
-                                        padding: const EdgeInsets.symmetric(
-                                            horizontal: 10.0, vertical: 8.0),
-                                        child: SizedBox(
-                                          width: MediaQuery.of(context)
-                                                  .size
-                                                  .width *
-                                              0.9,
-                                          child: CustomTextWidget(
-                                            value:
-                                                "Android || Flutter Developer",
-                                            fontWeight: FontWeight.bold,
-                                            fontSize: 14.0,
-                                            color: Colors.white,
-                                          ),
-                                        ),
-                                      ),
-
-                                      ///company name
-                                      Padding(
-                                        padding: const EdgeInsets.symmetric(
-                                            horizontal: 10.0, vertical: 8.0),
-                                        child: SizedBox(
-                                          width: MediaQuery.of(context)
-                                                  .size
-                                                  .width *
-                                              0.9,
-                                          child: CustomTextWidget(
-                                            value:
-                                                "Eglogics Softech IT Pvt Ltd",
-                                            fontWeight: FontWeight.w400,
-                                            fontSize: 13.0,
-                                            color: Colors.white,
-                                          ),
-                                        ),
-                                      ),
-
-                                      ///time
-                                      Padding(
-                                        padding: const EdgeInsets.symmetric(
-                                            horizontal: 10.0, vertical: 8.0),
-                                        child: SizedBox(
-                                          width: MediaQuery.of(context)
-                                                  .size
-                                                  .width *
-                                              0.9,
-                                          child: CustomTextWidget(
-                                            value:
-                                                "03/2020 - 05/2021, Kanpur,UP",
-                                            fontWeight: FontWeight.bold,
-                                            fontSize: 13.0,
-                                            color: Colors.white,
-                                          ),
-                                        ),
-                                      ),
-
-                                      ///description
-                                      Wrap(
-                                        children: [
-                                          Padding(
-                                            padding: const EdgeInsets.symmetric(
-                                                horizontal: 10.0,
-                                                vertical: 8.0),
-                                            child: CustomTextWidget(
-                                              value:
-                                                  "Developed an offline QR code scanning app for warehouse management. Created a comprehensive employee management app to track projects, working hours, and more. Built multi-platform apps for Android, iOS, and Web. Worked with teams to develop RESTful APIs and integrated them into the app for data synchronization.Collaborated with UX/UI designers to implement modern, responsive app designs.",
-                                              fontWeight: FontWeight.bold,
+                                              value: AppString.chetuExperience,
+                                              fontWeight: FontWeight.w300,
                                               fontSize: 13.0,
                                               color: Colors.white,
                                             ),
@@ -1093,8 +1010,7 @@ class _HomeScreenState extends State<HomeScreen> {
                                             MediaQuery.of(context).size.width *
                                                 0.9,
                                         child: CustomTextWidget(
-                                          value:
-                                              "Motivated Flutter Developer and Team Lead with over 5 years of experience in leading cross-functional teams, building high-quality mobile applications, and delivering projects on time. Adept at driving operational improvements, resolving complex issues, and optimizing workflows. Proven ability to manage large-scale projects, enhance customer satisfaction, and consistently exceed quality and performance benchmarks. Expertise in Flutter, Dart, and mobile app development, with a track record of successful project delivery.",
+                                          value: AppString.summary,
                                           fontWeight: FontWeight.w400,
                                           fontSize: 15.0,
                                           color: Colors.white,
@@ -1471,95 +1387,10 @@ class _HomeScreenState extends State<HomeScreen> {
                                                         vertical: 8.0),
                                                 child: CustomTextWidget(
                                                   value:
-                                                      "Developed and maintained cross-platform mobile apps using Flutter for Android, iOS, and Web. Implemented BLoC and MVVM architectures to separate business logic from UI, improving app scalability and maintainability. Integrated Firebase for authentication, real-time database, and push notifications.Worked with teams to develop RESTful APIs and integrated them into the app for data synchronization. Collaborated with UX/UI designers to implement modern, responsive app designs.",
-                                                  fontWeight: FontWeight.bold,
+                                                      AppString.chetuExperience,
+                                                  fontWeight: FontWeight.w300,
                                                   fontSize: 13.0,
                                                   color: AppColor.white,
-                                                ),
-                                              ),
-                                            ],
-                                          ),
-                                        ],
-                                      ),
-
-                                      /// Second
-
-                                      Column(
-                                        children: [
-                                          ///title
-                                          Padding(
-                                            padding: const EdgeInsets.symmetric(
-                                                horizontal: 10.0,
-                                                vertical: 8.0),
-                                            child: SizedBox(
-                                              width: MediaQuery.of(context)
-                                                      .size
-                                                      .width *
-                                                  0.9,
-                                              child: CustomTextWidget(
-                                                value:
-                                                    "Android || Flutter Developer",
-                                                fontWeight: FontWeight.bold,
-                                                fontSize: 14.0,
-                                                color: Colors.white,
-                                              ),
-                                            ),
-                                          ),
-
-                                          ///company name
-                                          Padding(
-                                            padding: const EdgeInsets.symmetric(
-                                                horizontal: 10.0,
-                                                vertical: 8.0),
-                                            child: SizedBox(
-                                              width: MediaQuery.of(context)
-                                                      .size
-                                                      .width *
-                                                  0.9,
-                                              child: CustomTextWidget(
-                                                value:
-                                                    "Eglogics Softech IT Pvt Ltd",
-                                                fontWeight: FontWeight.w400,
-                                                fontSize: 13.0,
-                                                color: Colors.white,
-                                              ),
-                                            ),
-                                          ),
-
-                                          ///time
-                                          Padding(
-                                            padding: const EdgeInsets.symmetric(
-                                                horizontal: 10.0,
-                                                vertical: 8.0),
-                                            child: SizedBox(
-                                              width: MediaQuery.of(context)
-                                                      .size
-                                                      .width *
-                                                  0.9,
-                                              child: CustomTextWidget(
-                                                value:
-                                                    "03/2020 - 05/2021, Kanpur,UP",
-                                                fontWeight: FontWeight.bold,
-                                                fontSize: 13.0,
-                                                color: Colors.white,
-                                              ),
-                                            ),
-                                          ),
-
-                                          ///description
-                                          Wrap(
-                                            children: [
-                                              Padding(
-                                                padding:
-                                                    const EdgeInsets.symmetric(
-                                                        horizontal: 10.0,
-                                                        vertical: 8.0),
-                                                child: CustomTextWidget(
-                                                  value:
-                                                      "Developed an offline QR code scanning app for warehouse management. Created a comprehensive employee management app to track projects, working hours, and more. Built multi-platform apps for Android, iOS, and Web. Worked with teams to develop RESTful APIs and integrated them into the app for data synchronization.Collaborated with UX/UI designers to implement modern, responsive app designs.",
-                                                  fontWeight: FontWeight.bold,
-                                                  fontSize: 13.0,
-                                                  color: Colors.white,
                                                 ),
                                               ),
                                             ],

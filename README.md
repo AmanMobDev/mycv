@@ -5,8 +5,8 @@ In this project i have create my CV on digital way. I deployed my CV on firebase
 URL: https://myresume-dcd44.web.app/
 
 ## Mobile
-<img float="center" alt="img_2.png" height="400" src="img_2.png" width="200"/>
-<img float="center" alt="img.png" height="400" src="img.png" width="200"/>
+<img alt="img_2.png" height="400" src="img_2.png" width="200"/>
+<img alt="img.png" height="400" src="img.png" width="200"/>
 
 ## Web
 <img alt="img_1.png" height="400" src="img_1.png" width="1000"/>
