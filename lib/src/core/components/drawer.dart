@@ -252,7 +252,7 @@ class CustomDrawer extends StatelessWidget {
                     GestureDetector(
                       onTap: () {
                         downloadFile(
-                            "assets/files/AMAN_MISHRA_FLUTTER_DEVELOPER_5+YEAR.pdf");
+                            "assets/files/AMAN_MISHRA_SENIOR_FLUTTER_DEVELOPER_3+YEAR.pdf");
                       },
                       child: Container(
                         padding: const EdgeInsets.symmetric(
