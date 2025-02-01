@@ -137,6 +137,27 @@ class CustomDrawer extends StatelessWidget {
                       ),
                     ),
                     GestureDetector(
+                      onTap: () {},
+                      child: Padding(
+                        padding: const EdgeInsets.symmetric(
+                          horizontal: 10.0,
+                        ),
+                        child: ListTile(
+                          leading: SvgPicture.asset(
+                            services,
+                            width: 24.0,
+                            height: 24.0,
+                          ),
+                          title: CustomTextWidget(
+                            value: AppString.services,
+                            fontWeight: FontWeight.w400,
+                            fontSize: 15.0,
+                            color: Colors.black,
+                          ),
+                        ),
+                      ),
+                    ),
+                    /*GestureDetector(
                       onTap: () async {
                         await Clipboard.setData(const ClipboardData(
                                 text: "aman232mishra@gmail.com"))
@@ -227,7 +248,7 @@ class CustomDrawer extends StatelessWidget {
                           ),
                         ),
                       ),
-                    ),
+                    ),*/
                   ],
                 ),
               ),

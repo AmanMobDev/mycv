@@ -36,14 +36,15 @@ const api = "${iconPath}api.svg";
 const localDB = "${iconPath}localDB.svg";
 const cicd = "${iconPath}cicd.svg";
 const github1 = "${iconPath}github1.svg";
+const services = "${iconPath}services.svg";
 const phone = "${iconPath}phone.svg";
 const email = "${iconPath}email.svg";
 const link = "${iconPath}link.svg";
 const connect = "${iconPath}connect.svg";
 const download = "${iconPath}download.svg";
 const home = "${iconPath}home.svg";
-const project = "${iconPath}project.svg";
-const certificate = "${iconPath}certificate.svg";
+const project = "${iconPath}work.svg";
+const certificate = "${iconPath}certificates.svg";
 
 ///Assets
 

@@ -8,6 +8,7 @@ class AppString {
   static const project = "Project";
   static const home = "Home";
   static const gitHub = "GitHub";
+  static const services = "Services";
   static const email = "Email";
   static const phone = "Phone";
   static const downloadCV = "Download CV";
