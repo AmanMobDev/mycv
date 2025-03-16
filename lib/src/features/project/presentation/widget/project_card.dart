@@ -1,4 +1,4 @@
-import 'package:mycv/src/config/export.dart';
+import 'package:mycv/src/config/export/export.dart';
 
 /*******************************************************************************
  *Created By Aman Mishra

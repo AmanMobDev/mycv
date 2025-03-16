@@ -1,5 +1,4 @@
-import '../../config/export.dart';
-
+import '../../config/export/export.dart';
 /*******************************************************************************
  *Created By Aman Mishra
  * This file is used for define all route.
@@ -21,6 +20,10 @@ class Routes {
       case RouteName.projectScreen:
         return MaterialPageRoute(
           builder: (context) => const ProjectScreen(),
+        );
+      case RouteName.serviceScreen:
+        return MaterialPageRoute(
+          builder: (context) => ServiceScreen(),
         );
 
       default:

@@ -1,4 +1,4 @@
-import 'package:mycv/src/config/export.dart';
+import 'package:mycv/src/config/export/export.dart';
 
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();

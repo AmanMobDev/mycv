@@ -4,7 +4,7 @@
 
 import 'package:flutter/cupertino.dart';
 
-import '../../config/export.dart';
+import '../../config/export/export.dart';
 
 class LoadingWidget extends StatelessWidget {
   final dynamic height;

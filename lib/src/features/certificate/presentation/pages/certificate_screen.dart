@@ -2,7 +2,7 @@
  *Created By Aman Mishra
  ******************************************************************************/
 
-import 'package:mycv/src/config/export.dart';
+import 'package:mycv/src/config/export/export.dart';
 
 class CertificateScreen extends StatefulWidget {
   const CertificateScreen({super.key});

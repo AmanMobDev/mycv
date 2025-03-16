@@ -1,7 +1,7 @@
 /*******************************************************************************
  *Created By Aman Mishra
  ******************************************************************************/
-import '../../config/export.dart';
+import '../../config/export/export.dart';
 
 class TextWidget extends StatelessWidget {
   final String value;

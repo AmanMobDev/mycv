@@ -2,7 +2,7 @@
 // ignore_for_file: type=lint
 import 'package:flutter/foundation.dart'
     show defaultTargetPlatform, kIsWeb, TargetPlatform;
-import 'package:mycv/src/config/export.dart';
+import 'package:mycv/src/config/export/export.dart';
 
 /// Default [FirebaseOptions] for use with your Firebase apps.
 ///

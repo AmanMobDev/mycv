@@ -4,7 +4,7 @@
 
 import 'dart:html' as html;
 
-import 'package:mycv/src/config/export.dart';
+import 'package:mycv/src/config/export/export.dart';
 
 launchURL({required String link}) async {
   final Uri url = Uri.parse(link);

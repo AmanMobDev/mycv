@@ -2,7 +2,7 @@
  *Created By Aman Mishra
  ******************************************************************************/
 
-import 'package:mycv/src/config/export.dart';
+import 'package:mycv/src/config/export/export.dart';
 
 class ExpandableText extends StatefulWidget {
   ExpandableText(this.text, {super.key});
