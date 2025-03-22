@@ -61,6 +61,32 @@ class CustomDrawer extends StatelessWidget {
                         ),
                       ),
                     ),
+                    // GestureDetector(
+                    //   onTap: () {
+                    //     Navigator.pushNamed(
+                    //       context,
+                    //       RouteName.certificateScreen,
+                    //     );
+                    //   },
+                    //   child: Padding(
+                    //     padding: const EdgeInsets.symmetric(
+                    //       horizontal: 10.0,
+                    //     ),
+                    //     child: ListTile(
+                    //       leading: SvgPicture.asset(
+                    //         certificate,
+                    //         width: 24.0,
+                    //         height: 24.0,
+                    //       ),
+                    //       title: CustomTextWidget(
+                    //         value: AppString.certificates,
+                    //         fontWeight: FontWeight.w400,
+                    //         fontSize: 15.0,
+                    //         color: Colors.black,
+                    //       ),
+                    //     ),
+                    //   ),
+                    // ),
                     GestureDetector(
                       onTap: () {
                         Navigator.pushNamed(
@@ -80,32 +106,6 @@ class CustomDrawer extends StatelessWidget {
                           ),
                           title: CustomTextWidget(
                             value: AppString.project,
-                            fontWeight: FontWeight.w400,
-                            fontSize: 15.0,
-                            color: Colors.black,
-                          ),
-                        ),
-                      ),
-                    ),
-                    GestureDetector(
-                      onTap: () {
-                        Navigator.pushNamed(
-                          context,
-                          RouteName.certificateScreen,
-                        );
-                      },
-                      child: Padding(
-                        padding: const EdgeInsets.symmetric(
-                          horizontal: 10.0,
-                        ),
-                        child: ListTile(
-                          leading: SvgPicture.asset(
-                            certificate,
-                            width: 24.0,
-                            height: 24.0,
-                          ),
-                          title: CustomTextWidget(
-                            value: AppString.certificates,
                             fontWeight: FontWeight.w400,
                             fontSize: 15.0,
                             color: Colors.black,
@@ -137,7 +137,12 @@ class CustomDrawer extends StatelessWidget {
                       ),
                     ),
                     GestureDetector(
-                      onTap: () {},
+                      onTap: () {
+                        Navigator.pushNamed(
+                          context,
+                          RouteName.serviceScreen,
+                        );
+                      },
                       child: Padding(
                         padding: const EdgeInsets.symmetric(
                           horizontal: 10.0,
@@ -157,98 +162,6 @@ class CustomDrawer extends StatelessWidget {
                         ),
                       ),
                     ),
-                    /*GestureDetector(
-                      onTap: () async {
-                        await Clipboard.setData(const ClipboardData(
-                                text: "aman232mishra@gmail.com"))
-                            .then(
-                          (value) {
-                            var snackBar = SnackBar(
-                              content: const Text(
-                                "Email copied successfully.",
-                                style: TextStyle(
-                                    color: Colors.black,
-                                    fontWeight: FontWeight.bold),
-                              ),
-                              shape: BeveledRectangleBorder(
-                                borderRadius: BorderRadius.circular(10.0),
-                              ),
-                              elevation: 10.0,
-                              behavior: SnackBarBehavior.floating,
-                              backgroundColor: Colors.grey,
-                            );
-                            ScaffoldMessenger.of(context)
-                                .showSnackBar(snackBar);
-                          },
-                        );
-
-                        //_lunchEmail();
-                      },
-                      child: Padding(
-                        padding: const EdgeInsets.symmetric(
-                          horizontal: 10.0,
-                        ),
-                        child: ListTile(
-                          leading: SvgPicture.asset(
-                            email,
-                            width: 24.0,
-                            height: 24.0,
-                          ),
-                          title: CustomTextWidget(
-                            value: AppString.email,
-                            fontWeight: FontWeight.w400,
-                            fontSize: 15.0,
-                            color: AppColor.black,
-                          ),
-                        ),
-                      ),
-                    ),
-                    GestureDetector(
-                      onTap: () async {
-                        await Clipboard.setData(
-                          const ClipboardData(
-                            text: "+918543883298",
-                          ),
-                        ).then(
-                          (value) {
-                            var snackBar = SnackBar(
-                              content: const Text(
-                                "Mobile number copied successfully.",
-                                style: TextStyle(
-                                    color: Colors.black,
-                                    fontWeight: FontWeight.bold),
-                              ),
-                              shape: BeveledRectangleBorder(
-                                borderRadius: BorderRadius.circular(10.0),
-                              ),
-                              elevation: 10.0,
-                              behavior: SnackBarBehavior.floating,
-                              backgroundColor: Colors.grey,
-                            );
-                            ScaffoldMessenger.of(context)
-                                .showSnackBar(snackBar);
-                          },
-                        );
-                      },
-                      child: Padding(
-                        padding: const EdgeInsets.symmetric(
-                          horizontal: 10.0,
-                        ),
-                        child: ListTile(
-                          leading: SvgPicture.asset(
-                            phone,
-                            width: 24.0,
-                            height: 24.0,
-                          ),
-                          title: CustomTextWidget(
-                            value: AppString.phone,
-                            fontWeight: FontWeight.w400,
-                            fontSize: 15.0,
-                            color: AppColor.black,
-                          ),
-                        ),
-                      ),
-                    ),*/
                   ],
                 ),
               ),
@@ -272,8 +185,7 @@ class CustomDrawer extends StatelessWidget {
                   children: [
                     GestureDetector(
                       onTap: () {
-                        downloadFile(
-                            "assets/files/AMAN_MISHRA_SENIOR_FLUTTER_DEVELOPER_3+YEAR.pdf");
+                        // downloadPdfWeb();
                       },
                       child: Container(
                         padding: const EdgeInsets.symmetric(

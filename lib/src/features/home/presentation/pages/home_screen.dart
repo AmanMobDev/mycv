@@ -360,105 +360,299 @@ class _HomeScreenState extends State<HomeScreen> {
                               ),
                             ),
 
-                            Padding(
-                              padding: const EdgeInsets.symmetric(
-                                  horizontal: 15.0, vertical: 8.0),
-                              child: Column(
-                                crossAxisAlignment: CrossAxisAlignment.start,
-                                mainAxisAlignment: MainAxisAlignment.start,
-                                mainAxisSize: MainAxisSize.min,
-                                children: [
-                                  CustomTextWidget(
-                                    value: "EXPERIENCE",
-                                    fontWeight: FontWeight.bold,
-                                    fontSize: 20.0,
-                                    color: Colors.white,
-                                  ),
-                                  const SizedBox(
-                                    height: 10,
-                                  ),
-
-                                  /// First
-                                  Column(
+                            Column(
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              mainAxisSize: MainAxisSize.max,
+                              mainAxisAlignment: MainAxisAlignment.start,
+                              children: [
+                                Padding(
+                                  padding: const EdgeInsets.symmetric(
+                                      horizontal: 15.0, vertical: 8.0),
+                                  child: Column(
+                                    crossAxisAlignment:
+                                        CrossAxisAlignment.start,
+                                    mainAxisAlignment: MainAxisAlignment.start,
+                                    mainAxisSize: MainAxisSize.min,
+                                    spacing: 10.0,
                                     children: [
-                                      ///title
-                                      Padding(
-                                        padding: const EdgeInsets.symmetric(
-                                            horizontal: 10.0, vertical: 8.0),
-                                        child: SizedBox(
-                                          width: MediaQuery.of(context)
-                                                  .size
-                                                  .width *
-                                              0.9,
-                                          child: CustomTextWidget(
-                                            value: "Software Engineer",
-                                            fontWeight: FontWeight.bold,
-                                            fontSize: 14.0,
-                                            color: Colors.white,
-                                          ),
-                                        ),
+                                      CustomTextWidget(
+                                        value: "EXPERIENCE",
+                                        fontWeight: FontWeight.bold,
+                                        fontSize: 20.0,
+                                        color: AppColor.white,
                                       ),
 
-                                      ///company name
-                                      Padding(
-                                        padding: const EdgeInsets.symmetric(
-                                            horizontal: 10.0, vertical: 8.0),
-                                        child: SizedBox(
-                                          width: MediaQuery.of(context)
-                                                  .size
-                                                  .width *
-                                              0.9,
-                                          child: CustomTextWidget(
-                                            value: "Chetu India Pvt Ltd",
-                                            fontWeight: FontWeight.w400,
-                                            fontSize: 13.0,
-                                            color: Colors.white,
-                                          ),
-                                        ),
-                                      ),
-
-                                      ///time
-                                      Padding(
-                                        padding: const EdgeInsets.symmetric(
-                                            horizontal: 10.0, vertical: 8.0),
-                                        child: SizedBox(
-                                          width: MediaQuery.of(context)
-                                                  .size
-                                                  .width *
-                                              0.9,
-                                          child: CustomTextWidget(
-                                            value: "07/2021 - Present, Noida",
-                                            fontWeight: FontWeight.bold,
-                                            fontSize: 13.0,
-                                            color: Colors.white,
-                                          ),
-                                        ),
-                                      ),
-
-                                      ///description
-                                      Wrap(
+                                      /// Chetu
+                                      Column(
+                                        crossAxisAlignment:
+                                            CrossAxisAlignment.start,
+                                        mainAxisSize: MainAxisSize.max,
+                                        mainAxisAlignment:
+                                            MainAxisAlignment.start,
                                         children: [
+                                          ///title
                                           Padding(
                                             padding: const EdgeInsets.symmetric(
                                                 horizontal: 10.0,
                                                 vertical: 8.0),
-                                            child: CustomTextWidget(
-                                              value: AppString.chetuExperience,
-                                              fontWeight: FontWeight.w300,
-                                              fontSize: 13.0,
-                                              color: Colors.white,
+                                            child: SizedBox(
+                                              width: MediaQuery.of(context)
+                                                      .size
+                                                      .width *
+                                                  0.9,
+                                              child: CustomTextWidget(
+                                                value: "Software Engineer",
+                                                fontWeight: FontWeight.bold,
+                                                fontSize: 14.0,
+                                                color: Colors.white,
+                                              ),
                                             ),
+                                          ),
+
+                                          ///company name
+                                          Padding(
+                                            padding: const EdgeInsets.symmetric(
+                                                horizontal: 10.0,
+                                                vertical: 8.0),
+                                            child: SizedBox(
+                                              width: MediaQuery.of(context)
+                                                      .size
+                                                      .width *
+                                                  0.9,
+                                              child: CustomTextWidget(
+                                                value: "Chetu India Pvt Ltd",
+                                                fontWeight: FontWeight.w400,
+                                                fontSize: 12.0,
+                                                color: Colors.white,
+                                              ),
+                                            ),
+                                          ),
+
+                                          ///time
+                                          Padding(
+                                            padding: const EdgeInsets.symmetric(
+                                                horizontal: 10.0,
+                                                vertical: 8.0),
+                                            child: SizedBox(
+                                              width: MediaQuery.of(context)
+                                                      .size
+                                                      .width *
+                                                  0.9,
+                                              child: CustomTextWidget(
+                                                value:
+                                                    "07/2021 - Present, Noida, UP",
+                                                fontWeight: FontWeight.bold,
+                                                fontSize: 14.0,
+                                                color: Colors.white,
+                                              ),
+                                            ),
+                                          ),
+
+                                          ///description
+                                          Wrap(
+                                            children: [
+                                              Padding(
+                                                padding:
+                                                    const EdgeInsets.symmetric(
+                                                        horizontal: 10.0,
+                                                        vertical: 8.0),
+                                                child: CustomTextWidget(
+                                                  value:
+                                                      AppString.chetuExperience,
+                                                  fontWeight: FontWeight.w300,
+                                                  fontSize: 13.0,
+                                                  color: AppColor.white,
+                                                ),
+                                              ),
+                                            ],
                                           ),
                                         ],
                                       ),
+
+                                      /// Eglogics
+                                      Column(
+                                        crossAxisAlignment:
+                                            CrossAxisAlignment.start,
+                                        mainAxisSize: MainAxisSize.max,
+                                        mainAxisAlignment:
+                                            MainAxisAlignment.start,
+                                        children: [
+                                          ///title
+                                          Padding(
+                                            padding: const EdgeInsets.symmetric(
+                                                horizontal: 10.0,
+                                                vertical: 8.0),
+                                            child: SizedBox(
+                                              width: MediaQuery.of(context)
+                                                      .size
+                                                      .width *
+                                                  0.9,
+                                              child: CustomTextWidget(
+                                                value:
+                                                    "Flutter || Android Developer",
+                                                fontWeight: FontWeight.bold,
+                                                fontSize: 14.0,
+                                                color: Colors.white,
+                                              ),
+                                            ),
+                                          ),
+
+                                          ///company name
+                                          Padding(
+                                            padding: const EdgeInsets.symmetric(
+                                                horizontal: 10.0,
+                                                vertical: 8.0),
+                                            child: SizedBox(
+                                              width: MediaQuery.of(context)
+                                                      .size
+                                                      .width *
+                                                  0.9,
+                                              child: CustomTextWidget(
+                                                value:
+                                                    "Eglogics Softech IT Pvt Ltd",
+                                                fontWeight: FontWeight.w400,
+                                                fontSize: 12.0,
+                                                color: Colors.white,
+                                              ),
+                                            ),
+                                          ),
+
+                                          ///time
+                                          Padding(
+                                            padding: const EdgeInsets.symmetric(
+                                                horizontal: 10.0,
+                                                vertical: 8.0),
+                                            child: SizedBox(
+                                              width: MediaQuery.of(context)
+                                                      .size
+                                                      .width *
+                                                  0.9,
+                                              child: CustomTextWidget(
+                                                value:
+                                                    "03/2020 - 05/2021, Noida, UP",
+                                                fontWeight: FontWeight.bold,
+                                                fontSize: 14.0,
+                                                color: Colors.white,
+                                              ),
+                                            ),
+                                          ),
+
+                                          ///description
+                                          Wrap(
+                                            children: [
+                                              Padding(
+                                                padding:
+                                                    const EdgeInsets.symmetric(
+                                                        horizontal: 10.0,
+                                                        vertical: 8.0),
+                                                child: CustomTextWidget(
+                                                  value: AppString
+                                                      .eglogicsExperience,
+                                                  fontWeight: FontWeight.w300,
+                                                  fontSize: 13.0,
+                                                  color: AppColor.white,
+                                                ),
+                                              ),
+                                            ],
+                                          ),
+                                        ],
+                                      ),
+
+                                      /// Czars
+                                      Column(
+                                        crossAxisAlignment:
+                                            CrossAxisAlignment.start,
+                                        mainAxisSize: MainAxisSize.max,
+                                        mainAxisAlignment:
+                                            MainAxisAlignment.start,
+                                        children: [
+                                          ///title
+                                          Padding(
+                                            padding: const EdgeInsets.symmetric(
+                                                horizontal: 10.0,
+                                                vertical: 8.0),
+                                            child: SizedBox(
+                                              width: MediaQuery.of(context)
+                                                      .size
+                                                      .width *
+                                                  0.9,
+                                              child: CustomTextWidget(
+                                                value: "Android Developer",
+                                                fontWeight: FontWeight.bold,
+                                                fontSize: 14.0,
+                                                color: Colors.white,
+                                              ),
+                                            ),
+                                          ),
+
+                                          ///company name
+                                          Padding(
+                                            padding: const EdgeInsets.symmetric(
+                                                horizontal: 10.0,
+                                                vertical: 8.0),
+                                            child: SizedBox(
+                                              width: MediaQuery.of(context)
+                                                      .size
+                                                      .width *
+                                                  0.9,
+                                              child: CustomTextWidget(
+                                                value:
+                                                    "Czars India IT Pvt. Ltd",
+                                                fontWeight: FontWeight.w400,
+                                                fontSize: 12.0,
+                                                color: Colors.white,
+                                              ),
+                                            ),
+                                          ),
+
+                                          ///time
+                                          Padding(
+                                            padding: const EdgeInsets.symmetric(
+                                                horizontal: 10.0,
+                                                vertical: 8.0),
+                                            child: SizedBox(
+                                              width: MediaQuery.of(context)
+                                                      .size
+                                                      .width *
+                                                  0.9,
+                                              child: CustomTextWidget(
+                                                value:
+                                                    "07/2019 - 02/2020, Kanpur, UP",
+                                                fontWeight: FontWeight.bold,
+                                                fontSize: 14.0,
+                                                color: Colors.white,
+                                              ),
+                                            ),
+                                          ),
+
+                                          ///description
+                                          Wrap(
+                                            children: [
+                                              Padding(
+                                                padding:
+                                                    const EdgeInsets.symmetric(
+                                                        horizontal: 10.0,
+                                                        vertical: 8.0),
+                                                child: CustomTextWidget(
+                                                  value:
+                                                      AppString.czarsExperience,
+                                                  fontWeight: FontWeight.w300,
+                                                  fontSize: 13.0,
+                                                  color: AppColor.white,
+                                                ),
+                                              ),
+                                            ],
+                                          ),
+                                        ],
+                                      ),
+
+                                      const SizedBox(
+                                        height: 20.0,
+                                      ),
                                     ],
                                   ),
-
-                                  const SizedBox(
-                                    height: 20.0,
-                                  ),
-                                ],
-                              ),
+                                ),
+                              ],
                             ),
                             Column(
                               crossAxisAlignment: CrossAxisAlignment.start,
@@ -1300,6 +1494,7 @@ class _HomeScreenState extends State<HomeScreen> {
                                         CrossAxisAlignment.start,
                                     mainAxisAlignment: MainAxisAlignment.start,
                                     mainAxisSize: MainAxisSize.min,
+                                    spacing: 10.0,
                                     children: [
                                       CustomTextWidget(
                                         value: "EXPERIENCE",
@@ -1307,11 +1502,8 @@ class _HomeScreenState extends State<HomeScreen> {
                                         fontSize: 20.0,
                                         color: AppColor.white,
                                       ),
-                                      const SizedBox(
-                                        height: 10,
-                                      ),
 
-                                      /// First
+                                      /// Chetu
                                       Column(
                                         crossAxisAlignment:
                                             CrossAxisAlignment.start,
@@ -1369,7 +1561,7 @@ class _HomeScreenState extends State<HomeScreen> {
                                                   0.9,
                                               child: CustomTextWidget(
                                                 value:
-                                                    "07/2021 - Present, Noida",
+                                                    "07/2021 - Present, Noida, UP",
                                                 fontWeight: FontWeight.bold,
                                                 fontSize: 14.0,
                                                 color: Colors.white,
@@ -1388,6 +1580,183 @@ class _HomeScreenState extends State<HomeScreen> {
                                                 child: CustomTextWidget(
                                                   value:
                                                       AppString.chetuExperience,
+                                                  fontWeight: FontWeight.w300,
+                                                  fontSize: 13.0,
+                                                  color: AppColor.white,
+                                                ),
+                                              ),
+                                            ],
+                                          ),
+                                        ],
+                                      ),
+
+                                      /// Eglogics
+                                      Column(
+                                        crossAxisAlignment:
+                                            CrossAxisAlignment.start,
+                                        mainAxisSize: MainAxisSize.max,
+                                        mainAxisAlignment:
+                                            MainAxisAlignment.start,
+                                        children: [
+                                          ///title
+                                          Padding(
+                                            padding: const EdgeInsets.symmetric(
+                                                horizontal: 10.0,
+                                                vertical: 8.0),
+                                            child: SizedBox(
+                                              width: MediaQuery.of(context)
+                                                      .size
+                                                      .width *
+                                                  0.9,
+                                              child: CustomTextWidget(
+                                                value:
+                                                    "Flutter || Android Developer",
+                                                fontWeight: FontWeight.bold,
+                                                fontSize: 14.0,
+                                                color: Colors.white,
+                                              ),
+                                            ),
+                                          ),
+
+                                          ///company name
+                                          Padding(
+                                            padding: const EdgeInsets.symmetric(
+                                                horizontal: 10.0,
+                                                vertical: 8.0),
+                                            child: SizedBox(
+                                              width: MediaQuery.of(context)
+                                                      .size
+                                                      .width *
+                                                  0.9,
+                                              child: CustomTextWidget(
+                                                value:
+                                                    "Eglogics Softech IT Pvt Ltd",
+                                                fontWeight: FontWeight.w400,
+                                                fontSize: 12.0,
+                                                color: Colors.white,
+                                              ),
+                                            ),
+                                          ),
+
+                                          ///time
+                                          Padding(
+                                            padding: const EdgeInsets.symmetric(
+                                                horizontal: 10.0,
+                                                vertical: 8.0),
+                                            child: SizedBox(
+                                              width: MediaQuery.of(context)
+                                                      .size
+                                                      .width *
+                                                  0.9,
+                                              child: CustomTextWidget(
+                                                value:
+                                                    "03/2020 - 05/2021, Noida, UP",
+                                                fontWeight: FontWeight.bold,
+                                                fontSize: 14.0,
+                                                color: Colors.white,
+                                              ),
+                                            ),
+                                          ),
+
+                                          ///description
+                                          Wrap(
+                                            children: [
+                                              Padding(
+                                                padding:
+                                                    const EdgeInsets.symmetric(
+                                                        horizontal: 10.0,
+                                                        vertical: 8.0),
+                                                child: CustomTextWidget(
+                                                  value: AppString
+                                                      .eglogicsExperience,
+                                                  fontWeight: FontWeight.w300,
+                                                  fontSize: 13.0,
+                                                  color: AppColor.white,
+                                                ),
+                                              ),
+                                            ],
+                                          ),
+                                        ],
+                                      ),
+
+                                      /// Czars
+                                      Column(
+                                        crossAxisAlignment:
+                                            CrossAxisAlignment.start,
+                                        mainAxisSize: MainAxisSize.max,
+                                        mainAxisAlignment:
+                                            MainAxisAlignment.start,
+                                        children: [
+                                          ///title
+                                          Padding(
+                                            padding: const EdgeInsets.symmetric(
+                                                horizontal: 10.0,
+                                                vertical: 8.0),
+                                            child: SizedBox(
+                                              width: MediaQuery.of(context)
+                                                      .size
+                                                      .width *
+                                                  0.9,
+                                              child: CustomTextWidget(
+                                                value: "Android Developer",
+                                                fontWeight: FontWeight.bold,
+                                                fontSize: 14.0,
+                                                color: Colors.white,
+                                              ),
+                                            ),
+                                          ),
+
+                                          ///company name
+                                          Padding(
+                                            padding: const EdgeInsets.symmetric(
+                                                horizontal: 10.0,
+                                                vertical: 8.0),
+                                            child: SizedBox(
+                                              width: MediaQuery.of(context)
+                                                      .size
+                                                      .width *
+                                                  0.9,
+                                              child: CustomTextWidget(
+                                                value:
+                                                    "Czars India IT Pvt. Ltd",
+                                                fontWeight: FontWeight.w400,
+                                                fontSize: 12.0,
+                                                color: Colors.white,
+                                              ),
+                                            ),
+                                          ),
+
+                                          ///time
+                                          Padding(
+                                            padding: const EdgeInsets.symmetric(
+                                                horizontal: 10.0,
+                                                vertical: 8.0),
+                                            child: SizedBox(
+                                              width: MediaQuery.of(context)
+                                                      .size
+                                                      .width *
+                                                  0.9,
+                                              child: CustomTextWidget(
+                                                value:
+                                                    "07/2019 - 02/2020, Kanpur, UP",
+                                                fontWeight: FontWeight.bold,
+                                                fontSize: 14.0,
+                                                color: Colors.white,
+                                              ),
+                                            ),
+                                          ),
+
+                                          ///description
+                                          Wrap(
+                                            children: [
+                                              Padding(
+                                                padding:
+                                                    const EdgeInsets.symmetric(
+                                                        horizontal: 10.0,
+                                                        vertical: 8.0),
+                                                child: CustomTextWidget(
+                                                  value:
+                                                      AppString.czarsExperience,
                                                   fontWeight: FontWeight.w300,
                                                   fontSize: 13.0,
                                                   color: AppColor.white,
